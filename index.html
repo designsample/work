@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/ic_fav.png"/>
+    <link rel="bookmark" href="img/ic_fav.png"/> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ISBN</title>
+    <meta name="keywords" content="全國新書資訊網,ISBN,申請ISBN,線上申請,書目下載,書目資料庫,電子書,國際標準書號,國際標準錄音錄影資料代碼,ISRC" />
+    <meta name="description" content="ISBN線上申請、書目資料庫下載與查詢" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!--     <link rel="stylesheet" href="css/docs.theme.min.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min 2.js"></script> -->
+    <!--js順序有差要注意-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/miller_code.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">選單切換</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-text">選單</span>
+                </button>
+                <button type="button" class="navbar-toggle navbar-language">En</button>
+                <h1 class="logo"><a class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
+            </div>
+            <!-- 手機隱藏選單區 -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse wrapper-menu">
+                <!-- 主選單 -->
+                <ul class="nav navbar-nav main-menu">
+                    <li class="active"><a href="#">服務項目</a></li>
+                    <li><a href="">線上申請</a></li>
+                    <li><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a href="">書目下載</a></li>
+                    <li><a href="">出版機構網</a></li>
+                    <li><a href="">出版品</a></li>
+                    <li><a href="">工具與資源</a></li>
+                    <!-- <li class="dropdown">   
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open">&ensp;</span>瀏覽 
+                            <b class="caret"></b></a>   
+                        <ul class="dropdown-menu">
+                            <li><a href="department.html">部級單位</a></li>
+                            <li><a href="division.html">科級單位</a></li>
+                            <li><a href="researcher.html">研究人員</a></li>
+                            <li><a href="article.html">學術著作</a></li>
+                            <li><a href="project.html">研究計畫</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- 次選單 -->
+                <ul class="nav navbar-nav sub-menu">
+                    <li><a href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
+                    <li><a class="btn-language hidden-xs" href="">English</a></li>
+                </ul>
+            </div>
+            <!-- 手機隱藏選單區結束 -->
+            <script type="text/javascript">
+            var $ofweidht = innerWidth; //取得螢幕寬度
+            if ($ofweidht <= 768) { //設定判斷條件，大於等於1280時frametop的CSS屬性為block
+                document.getElementById("logoImg").src = 'img/logo-smallz.png';
+            } else {
+                document.getElementById("logoImg").src = 'img/logo.png';
+            }
+            </script>
+        </div>
+    </nav>
+    <!--nav結束-->
+    <section class="index-search" id="indexSearch">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6 col-lg-offset-3 search-block">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1default" data-toggle="tab">書目資料查詢</a></li>
+                        <li><a href="#tab2default" data-toggle="tab">出版機構查詢</a></li>
+                        <li><a href="#tab3default" data-toggle="tab">申請進度查詢</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1default">
+                            <div class="col-xs-9 mt-20">
+                                <div class="input-group">
+                                    <div class="input-group-btn input-group-border">
+                                        <select class="btn btn-default">
+                                            <option value="Title" href="#">書名&emsp;&emsp;&emsp;</option>
+                                            <option value="Author" href="#">作者</option>
+                                            <option value="PublisherShortTitle" href="#">出版者</option>
+                                            <option value="SubjHeading" href="#">標題(主題詞)</option>
+                                            <option value="SerialTitle" href="#">叢書名</option>
+                                            <option value="ClassNo" href="#">分類號</option>
+                                            <option value="ISBN" href="#">ISBN</option>
+                                            <option value="Date_Sales" href="#">確認出版年月</option>
+                                            <option value="PubMonth_Pre" href="#">預計出版年月</option>
+                                        </select>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <input type="text" class="form-control" aria-label="輸入區域" placeholder="輸入 書名 / 作者 / ISBN……查詢">
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                            <!-- /左側搜尋框 -->
+                            <div class="col-xs-3 mt-20">
+                                <button class="btn btn-blue col-xs-12" type="button"><span class="glyphicon glyphicon-search"></span>查詢</button>
+                            </div>
+                            <!-- /右側搜尋按鈕 -->
+                            <div class="col-xs-12 m-10">
+                                <a href="4.1.1-SearchBooks.html" class="btn btn-blue col-xs-12" data-toggle="dropdown">進階搜尋<span class="glyphicon glyphicon-plus"></span></a>
+                                <!-- <ul class="dropdown-menu col-xs-12" role="menu">
+                                    <li><a href="" data-toggle="tab">aaa</a></li>
+                                    <li><a href="" data-toggle="tab">bbb</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <!--書目資料查詢-->
+
+                        <div class="tab-pane fade" id="tab2default">
+                            <div class="col-xs-9 mt-20">
+                                <div class="input-group">
+                                    <div class="input-group-btn input-group-border">
+                                        <select class="btn btn-default">
+                                            <option value="ChiTitle, EngTitle">全稱&emsp;&emsp;&emsp;</option>
+                                            <option value="ChiTitleShort" selected>簡稱</option>
+                                            <option value="Address, SaleRoomAddress, EngAddress">地址</option>
+                                            <option value="ISBNPrefix_Cur, ISBNPrefix_Oth">前綴號</option>
+                                        </select>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <input type="text" class="form-control" aria-label="輸入區域" placeholder="輸入出版機構全稱 / 簡稱 / 地址 / 前綴號……查詢" >
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                            <!-- /左側搜尋框 -->
+                            <div class="col-xs-3 mt-20">
+                                <button class="btn btn-blue col-xs-12" type="button"><span class="glyphicon glyphicon-search"></span>查詢</button>
+                            </div>
+                            <!-- /右側搜尋按鈕 -->
+                            <div class="col-xs-12 m-10">
+                                <a href="#" class="btn btn-blue col-xs-12" data-toggle="dropdown">進階搜尋 <span class="glyphicon glyphicon-plus"></span></a>
+                                <!-- <ul class="dropdown-menu col-xs-12" role="menu">
+                                    <li><a href="" data-toggle="tab">aaa</a></li>
+                                    <li><a href="" data-toggle="tab">bbb</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <!-- 出版機構查詢 -->
+                        <div class="tab-pane fade" id="tab3default">
+                            <div class="col-xs-12 mt-20">
+                                <form >
+                                    <label>出版機構帳號：</label><input type="text" class="form-control" aria-label="輸入帳號" placeholder="輸入  出版機構帳號">
+                                    <label>出版機構密碼：</label><input type="text" class="form-control" aria-label="輸入密碼" placeholder="輸入  出版機構密碼">
+                                </form>
+                                <!-- /input-group -->
+                            </div>
+                            <!-- /左側搜尋框 -->
+                            <div class="col-xs-12 mt-20">
+                                <button class="btn btn-blue col-xs-6" type="button">登入系統</button>
+                                <button class="btn btn-blue col-xs-6" type="button">忘記帳號密碼</button>
+                            </div>
+                            
+                        </div>
+                        <!-- 申請進度查詢 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="index-quicklink">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6">
+                    <div class="col-xs-12 quick-online p-0">
+                        <div class="col-xs-3 col-lg-2 p-0">
+                            <img alt="書本圖" src="img/bg-online.png">
+                        </div>
+                        <div class="col-xs-9 col-lg-10 p-0">
+                            <h2>線上申請 ISBN / CIP</h2>
+                            <p class="normal-text">國際標準書號(ISBN) / 出版品預行編目(CIP)</p>
+                            <div class="col-xs-12 p-0">
+                                <a href="" class="btn btn-blue col-xs-6">已有出版單位帳號</a>
+                                <a href="" class="btn btn-blue col-xs-6">申請帳號</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 link-1">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-ISBN.png">
+                            <h2>國際標準書號</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">ISBN 編號準則</a></li>
+                                <li><a href="" class="normal-a">申請流程</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 link-2">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-CIP.png">
+                            <h2>出版品<br>預行編目</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">出版品預行編目準則</a></li>
+                                <li><a href="" class="normal-a">申請流程</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 link-3">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-ISRC.png">
+                            <h2>國際標準錄音<br>錄影資料代碼</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">ISRC說明</a></li>
+                                <li><a href="" class="normal-a">ISRC國際標準錄音錄影資料代碼查詢系統</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <div class="col-xs-12 link-4">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-question.png">
+                            <h2>常見問題</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">如何申請國際標準書號(ISBN)</a></li>
+                                <li><a href="" class="normal-a">如何查詢申辦國際標準書號(ISBN) 暨出版品預行編目（CIP）的進度</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 link-5">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-downloadDoc.png">
+                            <h2>表單下載</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">出版者識別號資料申請單</a></li>
+                                <li><a href="" class="normal-a">國際標準書號/出版品預行編目(ISBN/CIP)申請單</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 link-6">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-downloadBook.png">
+                            <h2>書目資料下載</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">10筆內(免帳號)</a></li>
+                                <li><a href="" class="normal-a">10筆以上(登入/申請帳號)</a></li>
+                                <li><a href="" class="normal-a">查看新書書目</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 link-7">
+                        <a href="" class="col-xs-12 col-md-5 valign">
+                            <img alt="圖標" src="img/ic-book.png">
+                            <h2>每日預告書訊</h2>
+                        </a>
+                        <div class="col-xs-12 col-md-7 valign">
+                            <ul>
+                                <li><a href="" class="normal-a">訂閱每日預告書訊</a></li>
+                                <li><a href="" class="normal-a">修改個人閱讀興趣</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /row-->
+        </div>
+        <!-- /container-->
+    </section>
+    <!-- /index-quicklink 八快捷-->
+    <section class="index-news">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-5 index-allnews">
+                    <div class="col-xs-12 index-allnews">
+                        <h3 class="index-title">最新消息</h3>
+                        <div class="bookheight">
+                            <div class="list-table">
+                                <a href="" class="normal-a">
+                                    <div>2018-06-11</div>
+                                    <div>出版機構委託他單位代申請ISBN暨CIP業務，請檢附授權委託書</div>
+                                </a>
+                                <a href="" class="normal-a">
+                                    <div>2018-06-08</div>
+                                    <div>107年5月申辦ISBN暨CIP統計分析</div>
+                                </a>
+                                <a href="" class="normal-a">
+                                    <div>2018-06-08</div>
+                                    <div>107年4月申辦ISBN暨CIP統計分析</div>
+                                </a>
+                                <a href="" class="normal-a">
+                                    <div>2018-05-08</div>
+                                    <div>國際書展與年度出版回顧－《臺灣出版與閱讀》107年第1期出刊</div>
+                                </a>
+                                <a href="" class="normal-a">
+                                    <div>2018-04-20</div>
+                                    <div>出版機構委託他單位代申請ISBN暨CIP業務，請檢附授權委託書</div>
+                                </a>
+                                <a href="" class="normal-a">
+                                    <div>2018-06-08</div>
+                                    <div>107年5月申辦ISBN暨CIP統計分析</div>
+                                </a>
+                                <a href="" class="normal-a">
+                                    <div>2018-05-18</div>
+                                    <div>107年4月申辦ISBN暨CIP統計分析</div>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-blue col-xs-12">更多</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-5 pull-right index-booknews">
+                    <h3 class="index-title">最新預告書訊</h3>
+                    <div class="bookheight">
+                        <div class="list-table">
+                            <div class="booklist">
+                                <a href="" class="booklist-cell normal-a">
+                                    <div>臺灣研究</div>
+                                </a>
+                                <a href="" class="booklist-cell normal-a">
+                                    <div class="bold-text">10+島款款行: 四季X五感 離離離島出海放風</div>
+                                    <div>微笑台灣編輯團隊作 / 天下雜誌 / 9789863983521 / 733.69 / 2018-07-00</div>
+                                </a>
+                            </div>
+                            <div class="booklist">
+                                <a href="" class="booklist-cell normal-a">
+                                    <div>飲食健康</div>
+                                </a>
+                                <a href="" class="booklist-cell normal-a">
+                                    <div class="bold-text">0~5歲味覺平衡訓練法</div>
+                                    <div>TOKEIJI千繪著; 蔡麗蓉譯 / 采實文化 / 9789869501828 / 411.3 / 2017-07-00</div>
+                                </a>
+                            </div>
+                            <div class="booklist">
+                                <a href="" class="booklist-cell normal-a">
+                                    <div>其他</div>
+                                </a>
+                                <a href="" class="booklist-cell normal-a">
+                                    <div class="bold-text">樂在種菜
+                                        <<園藝之友>>: 雙月刊家庭蔬菜栽培選集</div>
+                                    <div>農友社會福利基金會 / 9789868761773 / 435.2 / 2018-07-00</div>
+                                </a>
+                            </div>
+                            <div class="booklist">
+                                <a href="" class="booklist-cell normal-a">
+                                    <div>各類文學</div>
+                                </a>
+                                <a href="" class="booklist-cell normal-a">
+                                    <div class="bold-text">名偵探福爾摩斯. 4, 跳舞人形暗號</div>
+                                    <div>亞瑟.柯南.道爾原著; 蘆邊拓編著; 城咲綾繪圖; 張東君翻譯 / 小熊 / 初版 / 9789578640382 / 873.59 / 2018-09-00</div>
+                                </a>
+                            </div>
+                            <div class="booklist">
+                                <a href="" class="booklist-cell normal-a">
+                                    <div>其他</div>
+                                </a>
+                                <a href="" class="booklist-cell normal-a">
+                                    <div class="bold-text">醫療問題與生命法學</div>
+                                    <div>廖又生著 / 亞東技術學院 / 初版 / 9789869666916 / 412.21 / 2018-07-00</div>
+                                </a>
+                            </div>
+                            <div class="booklist">
+                                <a href="" class="booklist-cell normal-a">
+                                    <div>其他</div>
+                                </a>
+                                <a href="" class="booklist-cell normal-a">
+                                    <div class="bold-text">樂在種菜
+                                        <<園藝之友>>: 雙月刊家庭蔬菜栽培選集</div>
+                                    <div>農友社會福利基金會 / 9789868761773 / 435.2 / 2018-07-00</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-blue col-xs-12">更多</a>
+                </div>
+            </div>
+            <!-- /row-->
+        </div>
+        <!-- /container-->
+    </section>
+    <!-- /section index-news最新消息-->
+    <section class="chosen-book">
+        <div id="demos" class="container">
+            <div class="row">
+                <h3 class="index-title">出版社選書</h3>
+                <div class="col-lg-10 col-lg-offset-1 columns">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/1.jpeg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/3.jpeg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/4.jpeg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/5.jpeg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/6.jpeg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img  alt="CCC創作集 復刊試刊號 封面"src="img/2.jpg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img  alt="CCC創作集 復刊試刊號 封面"src="img/3.jpeg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img  alt="CCC創作集 復刊試刊號 封面"src="img/2.jpg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img  alt="CCC創作集 復刊試刊號 封面"src="img/2.jpg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                        <div class="item">
+                            <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
+                            <a href="">CCC創作集 復刊試刊號</a>
+                            <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            $(document).ready(function() {
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 2,
+                            nav: false
+                        },
+                        600: {
+                            items: 3,
+                            nav: false
+                        },
+                        1000: {
+                            items: 5,
+                            nav: true,
+                            loop: false,
+                            margin: 10
+                        }
+                    }
+                })
+            })
+            </script>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3 logo-link">
+                    <a href="https://www.ncl.edu.tw/"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
+                    <a href="index.html"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
+                    <a onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
+                </div>
+                <div class="col-xs-12 col-lg-9 footer-address">
+                    <div class="col-xs-12">
+                        <a href="">網站地圖</a>&emsp;|&emsp;<a href="">聯絡信箱</a>&emsp;|&emsp;<a href="">本館地圖及交通資訊</a><div class="color-gray float-right">國家圖書館著作權聲明 Copyright © 2018 All rights reserved.</div><div class="clear"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-lg-4 color-white center">本館地址：10001臺北市中山南路20號</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">總機：(02)23619132</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">歡迎您，您是第 18078572 位拜訪者</div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="inline-block">線上看：<a href="">《臺灣出版與閱讀》</a>、<a href="">《全國新書資訊月刊》</a>、<a href="">每日預告書訊</a></div>
+                        <div class="float-right">更新日期：2018-06-27</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
