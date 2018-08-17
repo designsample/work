@@ -540,7 +540,10 @@
     }
 
     .text-right-ISBN {
-        padding-left: 70px;
+        padding-left: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+
     }
 
     .list-subLink-ISBN {
@@ -576,6 +579,29 @@
 
     .list-subLink-ISBN>:nth-child(1n)::before {
         content: '\00276F\000020';
+    }
+
+    .bookinfo-parent-tab .bookinfo-tab:hover, .bookinfo-parent-tab .bookinfo-tab:focus {
+        color: #fff !important;
+        background: #1470CC;
+        border: 1px solid #1470CC;
+    }
+    .bookinfo-parent-tab .bookinfo-tab.active{
+        color: #fff !important;
+        background: #1470CC;
+        border: 1px solid #1470CC;
+    }
+    .bookinfo-tabcontent{
+        display: block !important;
+        height: auto !important;
+
+    }
+    .bookinfo-tabcontent p{
+        display: block;
+    }
+    .img-bookinfocover{
+        display: block;
+        margin: 0 auto;
     }
     /*首頁以外樣式結束*/
     /*【+】【-】展開b款*/
@@ -943,6 +969,9 @@
             background: none;
             background-color: none;
             text-shadow: 1px 1px 20px #fff;
+        }
+        #demos .owl-carousel .item>img {
+            margin-bottom: 20px;
         }
         .index-allnews {
             background: #FFCF4D;
@@ -1504,6 +1533,19 @@
         .rwd-table td:before {
             color: #4a4a4a;
             font-weight: normal;
+        }
+        .table-bookinfo tr:first-child{
+            background: #E6EAED;
+        }
+        .table-bookinforight td{
+            border-top:0 !important;
+        }
+        .table-bookinforight td:first-child{
+            width: 6em;
+        }
+        .table-bookinforight tr:nth-child(odd){
+            border-top:0;
+            background: #F5F6F7;
         }
     }
 
