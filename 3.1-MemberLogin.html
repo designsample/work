@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/ic_fav.png" />
+    <link rel="bookmark" href="img/ic_fav.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ISBN</title>
+    <meta name="keywords" content="全國新書資訊網,ISBN,申請ISBN,線上申請,書目下載,書目資料庫,電子書,國際標準書號,國際標準錄音錄影資料代碼,ISRC" />
+    <meta name="description" content="ISBN線上申請、書目資料庫下載與查詢" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!--     <link rel="stylesheet" href="css/docs.theme.min.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min 2.js"></script> -->
+    <!--js順序有差要注意-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/miller_code.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">選單切換</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-text">選單</span>
+                </button>
+                <button type="button" class="navbar-toggle navbar-language">En</button>
+                <h1 class="logo"><a class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
+            </div>
+            <!-- 手機隱藏選單區 -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse wrapper-menu">
+                <!-- 主選單 -->
+                <ul class="nav navbar-nav main-menu">
+                    <li><a href="2.1.1-IntroISBN.html">服務項目</a></li>
+                    <li class="active"><a href="3.1-MemberLogin.html">線上申請</a></li>
+                    <li><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a href="5.2-WholeDownload.html">書目下載</a></li>
+                    <li><a href="">出版機構網</a></li>
+                    <li><a href="">出版品</a></li>
+                    <li><a href="">工具與資源</a></li>
+                    <!-- <li class="dropdown">   
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open">&ensp;</span>瀏覽 
+                            <b class="caret"></b></a>   
+                        <ul class="dropdown-menu">
+                            <li><a href="department.html">部級單位</a></li>
+                            <li><a href="division.html">科級單位</a></li>
+                            <li><a href="researcher.html">研究人員</a></li>
+                            <li><a href="article.html">學術著作</a></li>
+                            <li><a href="project.html">研究計畫</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- 次選單 -->
+                <ul class="nav navbar-nav sub-menu">
+                    <li><a href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
+                    <li><a class="btn-language hidden-xs" href="">English</a></li>
+                </ul>
+            </div>
+            <!-- 手機隱藏選單區結束 -->
+            <script type="text/javascript">
+            var $ofweidht = innerWidth; //取得螢幕寬度
+            if ($ofweidht <= 768) { //設定判斷條件，大於等於1280時frametop的CSS屬性為block
+                document.getElementById("logoImg").src = 'img/logo-smallz.png';
+            } else {
+                document.getElementById("logoImg").src = 'img/logo.png';
+            }
+            </script>
+        </div>
+    </nav>
+    <!--nav結束-->
+    <section class="search-books mh-30">
+        <div class="container">
+            <div class="row">
+                <!--左欄開始-->
+                <div class="search-left col-xs-12 col-lg-3">
+                    <div class="panel panel-ISBN">
+                        <h2 class="title-left-ISBN">線上申請</h2>
+                        <ul class="ul_listnone list-ISBN">
+                            <li><h3 class="list-subLink-ISBN"><a href="3.1-MemberLogin.html">帳號登入/登出</a></h3></li>
+                            <li><h3 class="list-subLink-ISBN"><a href="">ISBN/CIP線上申請</a></h3></li>
+                            <li><h3 class="list-subLink-ISBN"><a href="">申請進度查詢</a></h3></li>
+                            <li><h3 class="list-subLink-ISBN"><a href="">確認出版作業</a></h3></li>
+                            <li><h3 class="list-subLink-ISBN"><a href="">修改送存聯繫資料與密碼</a></h3></li>
+                            <li><h3 class="list-subLink-ISBN"><a href="">線上申請說明</a></h3></li>
+                        </ul>
+                    </div>
+                    <!-- / 線上申請 -->
+                </div>
+                <!-- /search-left左欄-->
+                <!-- search-right右欄-->
+                <div class="search-right col-xs-12 col-lg-9">
+                    <div class="title-right-ISBN">
+                        <h2>帳號登入/登出</h2>
+                    </div>
+
+                    
+                    <div class="content-intro">
+                        <h4 class="text-right-ISBN">請輸入帳號及密碼</h4>
+
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-xs-12 col-md-3 control-label">出版機構帳號：</label>
+                                <div class="col-xs-12 col-md-9">
+                                    <input type="text" class="form-control" aria-label="輸入帳號" placeholder="輸入  出版機構帳號">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-xs-12 col-md-3 control-label">出版機構密碼：</label>
+                                <div class="col-xs-12 col-md-9">
+                                    <input type="text" class="form-control" aria-label="輸入密碼" placeholder="輸入  出版機構密碼">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <button class="btn btn-blue col-xs-12" type="button">登入系統</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button class="btn btn-blue col-xs-12" type="button">忘記帳號密碼</button>
+                                </div>
+                            </div>   
+                        </form>
+                        <!-- /input-group -->
+
+                        <p>如果有任何說明文字請放在這裡顯示</p>
+                        <p class="text-danger">這是紅色的說明文字</p>
+                    </div>
+                    <!-- / content-intro內文/內容包在這 -->
+
+
+
+                </div>
+                <!-- /search-right 右欄-->
+            </div>
+            <!-- / row 整個內容-->
+        </div>
+        <!-- / container 整個內容 -->
+    </section>
+    <!-- / container 整個段落內容-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3 logo-link">
+                    <a href="https://www.ncl.edu.tw/"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
+                    <a href="index.html"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
+                    <a onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
+                </div>
+                <div class="col-xs-12 col-lg-9 footer-address">
+                    <div class="col-xs-12">
+                        <a href="">網站地圖</a>&emsp;|&emsp;<a href="">聯絡信箱</a>&emsp;|&emsp;<a href="">本館地圖及交通資訊</a>
+                        <div class="color-gray float-right">國家圖書館著作權聲明 Copyright © 2018 All rights reserved.</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-lg-4 color-white center">本館地址：10001臺北市中山南路20號</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">總機：(02)23619132</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">歡迎您，您是第 18078572 位拜訪者</div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="inline-block">線上看：<a href="">《臺灣出版與閱讀》</a>、<a href="">《全國新書資訊月刊》</a>、<a href="">每日預告書訊</a></div>
+                        <div class="float-right">更新日期：2018-06-27</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -3,24 +3,19 @@
         font-family: "WenQuanYi Zen Hei", "文泉驛正黑", "Heiti TC", "黑體-繁", "LiHei Pro", "儷黑 Pro", "PingFang TC", "Droid Sans", "Roboto", "Microsoft JhengHei", "微軟正黑體";
         word-break: break-word;
     }
-
     body {}
-
     a {
         cursor: pointer;
         color: #fd7b00;
     }
-
     a:hover,
     a:focus {
         cursor: pointer;
         color: #e04e01;
     }
-
     a:active {
         cursor: pointer;
     }
-
     .navbar-header {
         z-index: 80;
     }
@@ -139,9 +134,9 @@
 
     .index-search {
         height: 300px;
-        background: url(../img/bg-shadow.png),url(../img/bg-center.png), url(../img/bg-pattern-01.png);
-        background-repeat: repeat-x,no-repeat, repeat;
-        background-position: left bottom,center, left;
+        background: url(../img/bg-shadow.png), url(../img/bg-center.png), url(../img/bg-pattern-01.png);
+        background-repeat: repeat-x, no-repeat, repeat;
+        background-position: left bottom, center, left;
     }
 
     .index-search .input-group-btn>.btn {
@@ -503,7 +498,7 @@
         margin-bottom: 0;
     }
 
-    .list-ISBN li>:nth-child(1n) {
+    .list-ISBN li>:first-child {
         display: inline-block;
         margin-bottom: 12px;
     }
@@ -512,38 +507,63 @@
         margin-bottom: 12px;
     }*/
 
-    .list-ISBN li:last-child> :nth-child(1n) {
+    .list-ISBN>li:last-child> :first-child {
         margin-bottom: 0;
     }
 
+    .list-ISBN>li:last-child>ul {
+        margin-top: 15px;
+    }
+
+    .list-ISBN li>p {
+        display: inline-block;
+    }
+
     .title-right-ISBN {
-        color: #4A4A4A;
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 18px;
         width: 100%;
         height: 60px;
-        padding-left: 70px;
-        box-sizing: border-box;
+        vertical-align: middle;
+        display: inline-flex;
+    }
+
+    .title-right-ISBN>:nth-child(1n) {
+        padding: 0;
         margin: 0;
-        padding-top: 20px;
-        box-sizing: border-box;
+        font-size: 18px;
+        vertical-align: middle;
+        display: inline-flex;
+        line-height: 60px;
+    }
+
+    .title-right-ISBN>a::after {
+        content: '\00FF0F';
+        color: #4a4a4a;
+    }
+
+    .title-right-ISBN>:last-child {
+        font-weight: bold;
+        font-size: 18px;
+        color: #4A4A4A;
     }
 
     .title-right-ISBN::before {
-        width: 100%;
+        width: 60px;
         height: 60px;
-        position: absolute;
-        right: 5px;
+        position: relative;
+        left: -10px;
         top: 0;
         content: url(../img/bg-bookTitle.png);
     }
 
+
     .text-right-ISBN {
-        padding-left: 5px;
         margin-top: 10px;
         font-weight: bold;
+    }
 
+    h4.text-right-ISBN,
+    h5.text-right-ISBN {
+        font-size: 15px;
     }
 
     .list-subLink-ISBN {
@@ -558,11 +578,11 @@
     .list-subLink-ISBN a {
         width: 100%;
         display: block;
-        height: 45px;
+        min-height: 45px;
         background: #fff;
-        padding: 0 8px;
+        padding: 10px 8px;
         vertical-align: middle;
-        line-height: 45px;
+        line-height: 25px;
         border-radius: 5px;
         box-sizing: border-box;
     }
@@ -570,45 +590,54 @@
     .list-subLink-ISBN a:hover,
     .list-subLink-ISBN a:focus {
         border-bottom: 2px solid #efefef;
-        
+        padding-bottom: 8px;
     }
-    .list-subLink-ISBN a:active{
+
+    .list-subLink-ISBN a:active {
         border-bottom: 0;
         border-top: 2px solid #efefef;
-    } 
-
-    .list-subLink-ISBN>:nth-child(1n)::before {
-        content: '\00276F\000020';
+        padding-top: 8px;
     }
 
-    .bookinfo-parent-tab .bookinfo-tab:hover, .bookinfo-parent-tab .bookinfo-tab:focus {
+    .bookinfo-parent-tab .bookinfo-tab:hover,
+    .bookinfo-parent-tab .bookinfo-tab:focus {
         color: #fff !important;
         background: #1470CC;
         border: 1px solid #1470CC;
     }
-    .bookinfo-parent-tab .bookinfo-tab.active{
+
+    .bookinfo-parent-tab .bookinfo-tab.active {
         color: #fff !important;
         background: #1470CC;
         border: 1px solid #1470CC;
     }
-    .bookinfo-tabcontent{
+
+    .bookinfo-tabcontent {
         display: block !important;
         height: auto !important;
-
     }
-    .bookinfo-tabcontent p{
+
+    .bookinfo-tabcontent p {
         display: block;
     }
-    .img-bookinfocover{
+
+    .img-bookinfocover {
         display: block;
         margin: 0 auto;
+    }
+    /*所有簡介類型content-intro*/
+
+    .content-intro {
+        padding: 15px 30px;
     }
     /*首頁以外樣式結束*/
     /*【+】【-】展開b款*/
     /*原本高寬=1em*/
 
     .foldedb {
+        color: #fd7b00;
         display: inline-block;
+        margin-left: 5px;
         width: 0.6em;
         height: 0.6em;
         vertical-align: middle;
@@ -616,7 +645,9 @@
     }
 
     .unfoldedb {
+        color: #fd7b00;
         display: inline-block;
+        margin-left: 5px;
         width: 0.6em;
         height: 0.6em;
         vertical-align: middle;
@@ -624,11 +655,13 @@
     }
 
     .unfoldedb:active {
+        color: #fd7b00;
         display: inline-block;
+        margin-left: 5px;
         width: 0.6em;
         height: 0.6em;
         vertical-align: middle;
-        content: url(../img/ic-folded.svg);
+        content: url(../img/ic-folded.svg)
     }
 
     .classGroup {
@@ -641,6 +674,36 @@
     .ul_listnone {
         padding-left: 0;
         list-style: none;
+    }
+    /**/
+
+    .menu-left-sub {
+        margin-bottom: 15px;
+    }
+
+    .menu-left-sub .dropdown-menu {
+        margin-bottom: 15px;
+        position: static;
+        top: 100%;
+        width: 100%;
+        padding: 10px;
+        left: 0;
+        z-index: 1000;
+        font-size: 15px;
+        text-align: left;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .menu-left-sub>li>a {
+        margin-left: 15px;
+    }
+
+    .menu-left-sub .dropdown-menu li>a {
+        width: 100%;
+        border-radius: 5px;
     }
     /*無 按鈕--------------------*/
     /*一般狀態*/
@@ -718,13 +781,34 @@
     /*一般 按鈕--------------------*/
     /*一般狀態*/
 
+    .a-color2,
+    .menu-left-sub>li a {
+        cursor: pointer;
+        color: #4a4a4a;
+    }
+
+    .a-color2,
+    .menu-left-sub>li a:hover,
+    .a-color2,
+    .menu-left-sub>li a:focus {
+        cursor: pointer;
+        color: #000;
+    }
+
+    .a-color2,
+    .menu-left-sub>li a:active {
+        cursor: pointer;
+    }
+
     .btn-blue {}
 
     .btn-red {}
 
     .btn-gray {}
-    .btn-disable{}
-    .a-disable{
+
+    .btn-disable {}
+
+    .a-disable {
         color: #555;
         cursor: not-allowed;
     }
@@ -737,7 +821,9 @@
 
     .btn-gray:hover {}
 
-    .a-disable:hover,a-disable:focus,a-disable:active{
+    .a-disable:hover,
+    a-disable:focus,
+    a-disable:active {
         color: #555;
         cursor: not-allowed;
     }
@@ -950,9 +1036,9 @@
         }
         .index-search {
 
-            background: url(../img/bg-shadow.png),url(../img/bg-pattern-01.png);
-            background-repeat: repeat-x,repeat;
-            background-position: left bottom,left;
+            background: url(../img/bg-shadow.png), url(../img/bg-pattern-01.png);
+            background-repeat: repeat-x, repeat;
+            background-position: left bottom, left;
             height: 320px;
         }
         .index-search .search-block {
@@ -1045,7 +1131,7 @@
         .footer {
             margin-top: 40px;
 
-            background: url(../img/bg-footer4.png) ;
+            background: url(../img/bg-footer4.png);
             background-position: calc( (100% - 990px)/2 - 25px) 0px;
             background-repeat: no-repeat;
         }
@@ -1064,13 +1150,16 @@
         .footer {
             margin-top: 40px;
             background: url(../img/bg-footer4.png);
-            background-position:calc( (100% - 1150px)/2 - 157px) 0px
+            background-position: calc( (100% - 1150px)/2 - 157px) 0px;
             background-repeat:no-repeat;
         }
     }
     /*當螢幕大於1200px時*/
 
     @media screen and (min-width:1200px) {
+        .search-books{
+        min-height: calc( 100vh - 368px );
+    }
         .navbar {
             height: 134px;
             margin-bottom: 0;
@@ -1081,17 +1170,17 @@
             background-repeat: repeat-x, no-repeat;
             border: 0;
         }
-        .navbar-default .navbar-nav>.active>a{
+        .navbar-default .navbar-nav>.active>a {
             font-size: 16px;
         }
-        .navbar-nav>li>a{
+        .navbar-nav>li>a {
             padding: 16.5px 20px;
             font-size: 16px;
         }
         .index-news {
-            background: url(../img/bg-news.png),url(../img/bg-news2.png);
-            background-position: calc( (100% - 1150px)/2 + 340px) 0px,0 0;
-            background-repeat: no-repeat,no-repeat;
+            background: url(../img/bg-news.png), url(../img/bg-news2.png);
+            background-position: calc( (100% - 1150px)/2 + 340px) 0px, 0 0;
+            background-repeat: no-repeat, no-repeat;
             padding-bottom: 40px;
         }
         .index-allnews {
@@ -1103,9 +1192,8 @@
             background: url(../img/bg-footer4.png),
             url(../img/bg-footer2.png),
             url(../img/bg-footer3.png);
-            background-position:calc( (100% - 1150px)/2 - 157px) 0px,96px,bottom;
-            background-repeat:no-repeat,repeat-x,repeat-x;
-
+            background-position: calc( (100% - 1150px)/2 - 157px) 0px, 96px, bottom;
+            background-repeat: no-repeat, repeat-x, repeat-x;
         }
         .logo-link {
             background: url(../img/bg-footer1.png) top left no-repeat;
@@ -1134,6 +1222,19 @@
     }
     /*theme*/
     /*color*/
+
+    .div-body .focus {
+
+        z-index: 99;
+
+
+        -webkit-animation: blink 3s linear 0s 1 alternate;
+        animation: blink 3s linear 0s 1 alternate;
+    }
+
+    .bg-0 {
+        background: transparent !important;
+    }
 
     .color-light-gray {
         color: #e8e8e8;
@@ -1350,7 +1451,8 @@
         overflow: hidden;
         color: #4a4a4a;
     }
-    .rwd-table tr:first-child{
+
+    .rwd-table tr:first-child {
         font-weight: bold;
     }
 
@@ -1534,38 +1636,155 @@
             color: #4a4a4a;
             font-weight: normal;
         }
-        .table-bookinfo tr:first-child{
+        .table-bookinfo tr:first-child {
             background: #E6EAED;
         }
-        .table-bookinforight td{
-            border-top:0 !important;
+        .table-bookinforight td {
+            border-top: 0 !important;
         }
-        .table-bookinforight td:first-child{
+        .table-bookinforight td:first-child {
             width: 6em;
         }
-        .table-bookinforight tr:nth-child(odd){
-            border-top:0;
+        .table-bookinforight tr:nth-child(odd) {
+            border-top: 0;
             background: #F5F6F7;
         }
     }
+    /*div table*/
 
+    .div-table {
+        display: table;
+        width: 100%;
+        border-color: transparent;
+        border: 0;
+        margin-bottom: 1em;
+    }
 
+    .div-table>.div-heading {
+        display: table-header-group;
+        background: transparent;
+    }
 
+    .div-table>.div-body {
+        display: table-row-group;
+    }
 
+    .div-table>.div-body:before,
+    .div-table>.div-body:after {
+        content: none;
+    }
 
+    .div-table>.div-footer {
+        display: table-footer-group;
+        background: transparent;
+    }
 
+    .div-table>div>.tr {
+        display: table-row;
+    }
 
+    .div-table>div:last-child>.tr:last-child>.td {
+        border-bottom: none;
+    }
 
-    @keyframes FadeIn_underline {
-        from {
-            -webkit-box-shadow: 0 0 14px rgba(0, 40, 53, 0);
-            -moz-box-shadow: 0 0 14px rgba(0, 40, 53, 0);
-            box-shadow: 0 0 15px rgba(0, 40, 53, 0);
+    .div-table .td {
+        display: table-cell;
+        padding: 15px;
+        /*border: 1px solid #ddd;*/
+        border-top: none;
+        border-left: none;
+    }
+
+    .div-table .td:last-child {
+        border-right: none;
+    }
+
+    .div-table>.div-heading>.tr>.td,
+    .div-table>.div-footer>.tr>.td {
+        background-color: #fff;
+    }
+
+    .div-table>.div-body>.tr:nth-child(odd) {
+        background-color: #F5F6F7;
+    }
+
+    .div-table>.div-heading>.tr>.td:first-child {
+        /*border-radius: 4px 0 0 0;*/
+    }
+
+    .div-table>.div-heading>.tr>.td:last-child {
+        /*border-radius: 0 4px 0 0;*/
+    }
+
+    .div-table>.div-footer>.tr>.td:first-child {
+        /*border-radius: 0 0 0 4px;*/
+    }
+
+    .div-table>.div-footer>.tr>.td:last-child {
+        /*border-radius: 0 0 4px 0;*/
+    }
+    .table-striped>tbody>tr:nth-of-type(odd){
+            background-color: #F5F6F7;
         }
-        to {
-            -webkit-box-shadow: 0 0 14px rgba(0, 40, 53, 0.18);
-            -moz-box-shadow: 0 0 14px rgba(0, 40, 53, 0.18);
-            box-shadow: 0 0 15px rgba(0, 40, 53, 0.18);
+
+
+
+
+
+
+    @-webkit-keyframes blink {
+        0% {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        25% {
+            -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            box-shadow: 0px 1px 13px 2px #f0ad4e;
+        }
+        50% {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        75% {
+            -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            box-shadow: 0px 1px 13px 2px #f0ad4e;
+        }
+        100% {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        25% {
+            -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            box-shadow: 0px 1px 13px 2px #f0ad4e;
+        }
+        50% {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        75% {
+            -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
+            box-shadow: 0px 1px 13px 2px #f0ad4e;
+        }
+        100% {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
         }
     }
 
