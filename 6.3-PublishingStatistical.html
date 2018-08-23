@@ -47,9 +47,9 @@
                 <ul class="nav navbar-nav main-menu">
                     <li><a href="2.1.1-IntroISBN.html">服務項目</a></li>
                     <li><a href="3.1-MemberLogin.html">線上申請</a></li>
-                    <li class="active"><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
                     <li><a href="5.2-WholeDownload.html">書目下載</a></li>
-                    <li><a href="6.2.1-SortByStroke.html">出版機構網</a></li>
+                    <li class="active"><a href="6.2.1-SortByStroke.html">出版機構網</a></li>
                     <li><a href="7.2.1-NewBookIssue.html">出版品</a></li>
                     <li><a href="8.1-ISBNChangeCode.html">工具與資源</a></li>
                     <!-- <li class="dropdown">   
@@ -85,115 +85,72 @@
                 <!--左欄開始-->
                 <div class="search-left col-xs-12 col-lg-3">
                     <div class="panel panel-ISBN">
-                        <h2 class="title-left-ISBN">書目資料庫</h2>
+                        <h2 class="title-left-ISBN">出版機構網</h2>
                         <ul class="ul_listnone list-ISBN">
                             <li>
-                                <h3 class="list-subLink-ISBN"><a href="">書目資料查詢</a></h3></li>
+                                <h3 class="list-subLink-ISBN"><a href="">出版機構查詢</a></h3>
+                            </li>
                             <li>
-                                <h3 class="list-subLink-ISBN"><a href="">查詢說明</a></h3></li>
+                                <h3 class="list-subLink-ISBN"><a href="">出版機構瀏覽</a></h3>
+                            </li>
                             <li>
-                                <h3 class="list-subLink-ISBN"><a href="">ISBN/CIP各年度統計</a></h3></li>
-                        </ul>
-                    </div>
-                    <!-- /書目資料庫 -->
-                    <div class="panel panel-ISBN">
-                        <h2 class="title-left-ISBN">聚類分析(出版年月)</h2>
-                        <ul class="ul_listnone list-ISBN">
-                            <li><a href="">107/05</a>
-                                <p>（7筆）</p>
+                                <h3 class="list-subLink-ISBN"><a href="">出版機構統計</a></h3>
+                            </li>
+                            <li>
+                                <h3 class="list-subLink-ISBN"><a href="6.3-PublishingStatistical.html">新申請ISBN出版機構名錄</a></h3>
                             </li>
                         </ul>
                     </div>
-                    <!-- /聚類分析(出版年月) -->
-                    <div class="panel panel-ISBN">
-                        <h2 class="title-left-ISBN">聚類分析(出版者)</h2>
-                        <ul class="ul_listnone list-ISBN">
-                            <li><a href="">左岸文化</a>
-                                <p>（4筆）</p>
-                            </li>
-                            <li><a href="">廣場</a>
-                                <p>（2筆）</p>
-                            </li>
-                            <li><a href="">貓頭鷹</a>
-                                <p>（1筆）</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /聚類分析(出版者) -->
-                    <div class="panel panel-ISBN">
-                        <h2 class="title-left-ISBN">聚類分析(分類號)</h2>
-                        <ul class="ul_listnone list-ISBN">
-                            <li><a href="">社會科學類</a>
-                                <p>（7筆）</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /聚類分析(分類號) -->
+                    <!-- /出版機構網 -->
                 </div>
                 <!-- /search-left左欄-->
                 <!-- search-right左欄-->
                 <div class="search-right col-xs-12 col-lg-9">
-                    <div class="title-right-ISBN"><a href="4.1.1-SearchBooks.html">書目資料庫</a><h2>ISBN/CIP各年度統計</h2></div>
-                    
-                    <div class="col-xs-12">
-                        <p class="text-right-ISBN">民國78年07月至107年07月</p>
-
-                        <table class="rwd-table table-bookinfo">
+                    <div class="title-right-ISBN">
+                        <h2>出版機構統計</h2>
+                    </div>
+                    <div class="col-xs-12 mb-30">
+                        <p class="text-right-ISBN">出版機構統計結果</p>
+                        <table width="100%" class="table table-bookinfo table-striped">
+                            <thead>
+                                <tr>
+                                <th>統計項目</th>
+                                <th>統計數量</th>
+                            </tr>
+                            </thead>
+                            
                             <tr>
-                                <th>民國</th>
-                                <th>ISBN發配量</th>
-                                <th>圖書種數</th>
-                                <th>CIP編配量</th>
+                                <td>出版機構總數：</td>
+                                <td>32670</td>
                             </tr>
                             <tr>
-                                <td aria-label="民國" data-th="民國">78</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">29987</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">1553</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">76548</td>
+                                <td>政府單位數：</td>
+                                <td>4028</td>
                             </tr>
                             <tr>
-                                <td aria-label="民國" data-th="民國">79</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">76548</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">29987</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">1553</td>
+                                <td>非政府單位數：</td>
+                                <td>19798</td>
                             </tr>
                             <tr>
-                                <td aria-label="民國" data-th="民國">80</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">29987</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">1553</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">76548</td>
+                                <td>個人數：</td>
+                                <td>8844</td>
                             </tr>
                             <tr>
-                                <td aria-label="民國" data-th="民國">81</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">76548</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">29987</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">1553</td>
+                                <td>上月(2018-06)新增：</td>
+                                <td>101</td>
                             </tr>
                             <tr>
-                                <td aria-label="民國" data-th="民國">82</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">29987</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">1553</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">76548</td>
-                            </tr>
-                            <tr>
-                                <td aria-label="民國" data-th="民國">83</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">76548</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">29987</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">1553</td>
-                            </tr>
-                            <tr>
-                                <td aria-label="民國" data-th="民國">84</td>
-                                <td aria-label="ISBN發配量" data-th="ISBN發配量">29987</td>
-                                <td aria-label="圖書種數" data-th="圖書種數">1553</td>
-                                <td aria-label="CIP編配量" data-th="CIP編配量">76548</td>
+                                <td>本月(2018-07)新增：</td>
+                                <td>103</td>
                             </tr>
                         </table>
-                        <!-- / ISBN/CIP各年度統計 -->
+
+
 
                     </div>
-                    <!-- / 包覆 ISBN/CIP各年度統計 -->
+                    <!-- /表格 -->
+                    
                 </div>
-                <!-- /右邊區塊 -->
             </div>
         </div>
     </section>

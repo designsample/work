@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/ic_fav.png" />
+    <link rel="bookmark" href="img/ic_fav.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ISBN</title>
+    <meta name="keywords" content="全國新書資訊網,ISBN,申請ISBN,線上申請,書目下載,書目資料庫,電子書,國際標準書號,國際標準錄音錄影資料代碼,ISRC" />
+    <meta name="description" content="ISBN線上申請、書目資料庫下載與查詢" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!--     <link rel="stylesheet" href="css/docs.theme.min.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min 2.js"></script> -->
+    <!--js順序有差要注意-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/miller_code.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">選單切換</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-text">選單</span>
+                </button>
+                <button type="button" class="navbar-toggle navbar-language">En</button>
+                <h1 class="logo"><a class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
+            </div>
+            <!-- 手機隱藏選單區 -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse wrapper-menu">
+                <!-- 主選單 -->
+                <ul class="nav navbar-nav main-menu">
+                    <li><a href="2.1.1-IntroISBN.html">服務項目</a></li>
+                    <li><a href="3.1-MemberLogin.html">線上申請</a></li>
+                    <li><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a href="5.2-WholeDownload.html">書目下載</a></li>
+                    <li><a href="6.2.1-SortByStroke.html">出版機構網</a></li>
+                    <li><a href="7.2.1-NewBookIssue.html">出版品</a></li>
+                    <li class="active"><a href="8.1-ISBNChangeCode.html">工具與資源</a></li>
+                    <!-- <li class="dropdown">   
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open">&ensp;</span>大項次 
+                            <b class="caret"></b></a>   
+                        <ul class="dropdown-menu">
+                            <li><a href="">次項目</a></li>
+                            <li><a href="">次項目</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- 次選單 -->
+                <ul class="nav navbar-nav sub-menu">
+                    <li><a href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
+                    <li><a class="btn-language hidden-xs" href="">English</a></li>
+                </ul>
+            </div>
+            <!-- 手機隱藏選單區結束 -->
+            <script type="text/javascript">
+            var $ofweidht = innerWidth; //取得螢幕寬度
+            if ($ofweidht <= 768) { //設定判斷條件，大於等於1280時frametop的CSS屬性為block
+                document.getElementById("logoImg").src = 'img/logo-smallz.png';
+            } else {
+                document.getElementById("logoImg").src = 'img/logo.png';
+            }
+            </script>
+        </div>
+    </nav>
+    <!--nav結束-->
+    <section class="search-books mh-30">
+        <div class="container">
+            <div class="row">
+                <!--左欄開始-->
+                <div class="search-left col-xs-12 col-lg-3">
+                    <div class="panel panel-ISBN">
+                        <h2 class="title-left-ISBN">工具與資源</h2>
+                        <ul class="ul_listnone list-ISBN">
+                            <li>
+                                <h3 class="list-subLink-ISBN"><a href="8.1-ISBNChangeCode.html">ISBN&nbsp;10&amp;13碼轉換</a></h3>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+
+                                    <a type="button" id="Test01" onclick="openCitymotherChild('classGroup', 'unfolded_1', 'span01')">得獎好書<span id="span01" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_1">
+                                    <li>
+                                        <a href="8.2.1-Top1.html">國圖臺灣出版TOP1</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="8.2-Top1.html" class="dropdown-toggle" data-toggle="dropdown">國圖臺灣出版TOP1<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="">12月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">11月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">10月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">9月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">8月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">7月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">6月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">5月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">4月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">3月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">2月號</a>
+                                            </li>
+                                            <li>
+                                                <a href="">1月號</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">《臺灣出版與閱讀》出版社選書</a>
+                                    </li>
+                                    <li>
+                                        <a href="">文化部金鼎獎-圖書類</a>
+                                    </li>
+                                    <li>
+                                        <a href="">文化部金鼎獎-優良圖書出版品推薦</a>
+                                    </li>
+                                    <li>
+                                        <a href="">中小學生優良課外讀物推介</a>
+                                    </li>
+                                    <li>
+                                        <a href="">金漫獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">經濟部金書獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國民健康署健康好書</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國家文官學院每月一書</a>
+                                    </li>
+                                    <li>
+                                        <a href="">好書大家讀</a>
+                                    </li>
+                                    <li>
+                                        <a href="">教育部美感教育推薦書單</a>
+                                    </li>
+                                    <li>
+                                        <a href="">台北國際書展大獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">開卷好書獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">兒童文學牧笛獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國立臺灣文學館文學好書推廣專案</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Openbook好書獎</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+
+                                    <a type="button" id="Test02" onclick="openCitymotherChild('classGroup', 'unfolded_2', 'span02')">每日預告書訊<span id="span02" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_2">
+                                    <li>
+                                        <a href="">服務說明</a>
+                                    </li>
+                                    <li>
+                                        <a href="8.3.2-DailyNews.html">2018-08-21</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-20</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-17</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-16</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-15</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-14</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-13</a>
+                                    </li>
+                                    <li>
+                                        <a href="">修改個人閱讀興趣</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3 class="list-subLink-ISBN"><a href="8.4-QnA.html">Q &amp;A</a></h3>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+
+                                    <a type="button" id="Test03" onclick="openCitymotherChild('classGroup', 'unfolded_3', 'span03')">宣導短片<span id="span03" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_3">
+                                    <li>
+                                        <a href="8.5-HowToVideos.html#video-1" data-toggle="tab">ISBN申辦小撇步</a>
+                                    </li>
+                                    <li>
+                                        <a href="8.5-HowToVideos.html#video-2" data-toggle="tab">ISRC申辦小撇步</a>
+                                    </li>
+                                    <li>
+                                        <a href="8.5-HowToVideos.html#video-3" data-toggle="tab">電子書ISBN申辦</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+
+                                    <a type="button" id="Test04" onclick="openCitymotherChild('classGroup', 'unfolded_4', 'span04')">相關網站連結<span id="span04" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_4">
+                                    <li>
+                                        <a href="https://www.isbn-international.org" target="_blank">International ISBN Agency 國際標準書號中心總部<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ifpi.org/" target="_blank">IFPI國際錄音錄影資料總部<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.tipo.gov.tw" target="_blank">經濟部智慧財產局<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.gs1tw.org" target="_blank">商品條碼策進會<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.moc.gov.tw/content_355.html" target="_blank">文化部（人文及出版司）<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://tpi.culture.tw/" target="_blank">臺灣出版資訊網-TPI<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.issn.org/" target="_blank">ISSN International Centre 國際標準期刊號中心總部<br>(開新分頁)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /工具與資源 -->
+                </div>
+                <!-- /search-left左欄-->
+                <!-- search-right右欄-->
+                <div class="search-right col-xs-12 col-lg-9">
+                    <div class="title-right-ISBN">
+                        <h2>每日預告書訊 2018-08-22</h2>
+                    </div>
+                    <div class="content-intro">
+                        <div class="col-xs-12">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse1" class="btn btn-blue col-lg-12">臺灣研究 (共0筆)</a>
+                                        </h4>
+                                    <div id="Collapse1" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td>本期無此主題出版作品</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse2" class="btn btn-blue col-lg-12">宗教術數 (共7筆)</a>
+                                        </h4>
+                                    <div id="Collapse2" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse3" class="btn btn-blue col-lg-12">財經企管 (共4筆)</a>
+                                    </h4>
+                                    <div id="Collapse3" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse4" class="btn btn-blue col-lg-12">飲食健康 (共3筆)</a>
+                                        </h4>
+                                    <div id="Collapse4" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse5" class="btn btn-blue col-lg-12">生活藝術 (共6筆)</a>
+                                        </h4>
+                                    <div id="Collapse5" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse6" class="btn btn-blue col-lg-12">各類文學 (共37筆)</a>
+                                        </h4>
+                                    <div id="Collapse6" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse7" class="btn btn-blue col-lg-12">非文學 (共6筆)</a>
+                                        </h4>
+                                    <div id="Collapse7" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel">
+                                    <h4 class="mb-40">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse8" class="btn btn-blue col-lg-12">其他 (共63筆)</a>
+                                        </h4>
+                                    <div id="Collapse8" class="panel-collapse collapse">
+                                        <table class="rwd-table">
+                                            <tr>
+                                                <td style="min-width: 10em" aria-label="書名" data-th="書名"><a href="">阿含證果道次第緣起法(簡介)</a></td>
+                                                <td style="min-width: 5em" aria-label="作者" data-th="作者">大願法師講述</td>
+                                                <td style="min-width: 6em" aria-label="出版機構" data-th="出版機構">慈蓮寺</td>
+                                                <td style="min-width: 4em" aria-label="出版版次" data-th="出版版次">初版</td>
+                                                <td style="min-width: 8em" aria-label="ISBN" data-th="ISBN">9789869042499</td>
+                                                <td style="min-width: 5em" aria-label="出版類號" data-th="出版類號">221.84</td>
+                                                <td style="min-width: 5em" aria-label="出版年月" data-th="出版年月">2018-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td aria-label="書名" data-th="書名"><a href="">華嚴經疏論導讀</a></td>
+                                                <td aria-label="作者" data-th="作者">夢參老和尚主講; 方集編輯部整理</td>
+                                                <td aria-label="出版機構" data-th="出版機構">方廣文化</td>
+                                                <td aria-label="出版版次" data-th="出版版次">二版</td>
+                                                <td aria-label="ISBN" data-th="ISBN">9789867078902</td>
+                                                <td aria-label="出版類號" data-th="出版類號">221.2</td>
+                                                <td aria-label="出版年月" data-th="出版年月">2018-10</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#Collapse9">Reports</a>
+                                        </h4>
+                                    </div>
+                                    <div id="Collapse9" class="panel-collapse collapse">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <a href="">Articles</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="">News</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /手風琴/收合效果 包好包滿 -->
+                </div>
+                <!-- /每日新書 -->
+            </div>
+            <!-- /content-intro -->
+        </div>
+        <!-- /search-right 右欄-->
+        </div>
+        <!-- / row 整個內容-->
+        </div>
+        <!-- / container 整個內容 -->
+    </section>
+    <!-- / container 整個段落內容-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3 logo-link">
+                    <a href="https://www.ncl.edu.tw/"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
+                    <a href="index.html"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
+                    <a onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
+                </div>
+                <div class="col-xs-12 col-lg-9 footer-address">
+                    <div class="col-xs-12">
+                        <a href="">網站地圖</a>&emsp;|&emsp;<a href="">聯絡信箱</a>&emsp;|&emsp;<a href="">本館地圖及交通資訊</a>
+                        <div class="color-gray float-right">國家圖書館著作權聲明 Copyright © 2018 All rights reserved.</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-lg-4 color-white center">本館地址：10001臺北市中山南路20號</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">總機：(02)23619132</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">歡迎您，您是第 18078572 位拜訪者</div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="inline-block">線上看：<a href="">《臺灣出版與閱讀》</a>、<a href="">《全國新書資訊月刊》</a>、<a href="">每日預告書訊</a></div>
+                        <div class="float-right">更新日期：2018-06-27</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -625,6 +625,13 @@
         display: block;
         margin: 0 auto;
     }
+    /*依筆畫*/
+    .btngroup-stroke .btn-group{
+        margin-bottom: 10px;
+    }
+    .btngroup-stroke .btn-group .btn{
+        border-color: transparent; 
+    }
     /*所有簡介類型content-intro*/
 
     .content-intro {
@@ -1223,11 +1230,8 @@
     /*theme*/
     /*color*/
 
-    .div-body .focus {
-
+    .form-focus .active {
         z-index: 99;
-
-
         -webkit-animation: blink 3s linear 0s 1 alternate;
         animation: blink 3s linear 0s 1 alternate;
     }
@@ -1313,7 +1317,10 @@
     }
 
 
-
+    .b-0{
+        border:0px;
+        border-color: transparent;
+    }
     .p-hr {
         padding: 1em 0;
     }
@@ -1345,9 +1352,15 @@
     .mt-20 {
         margin-top: 20px;
     }
+    .mb-10 {
+        margin-bottom: 10px;
+    }
 
     .mb-30 {
         margin-bottom: 30px;
+    }
+    .mb-40 {
+        margin-bottom: 40px;
     }
 
     .hr {
@@ -1452,7 +1465,7 @@
         color: #4a4a4a;
     }
 
-    .rwd-table tr:first-child {
+    .rwd-table tr:first-child>th {
         font-weight: bold;
     }
 
@@ -1480,7 +1493,7 @@
     .rwd-table td:before {
         content: attr(data-th) " : ";
         font-weight: bold;
-        width: 6.5em;
+        width: 7em;
         display: inline-block;
     }
 
@@ -1516,7 +1529,7 @@
         width: 100%;
     }
 
-    .table-searchoptions tr td>:nth-child(1n) {
+    .table-searchoptions tr td>:nth-child(1n) ,.select-normal{
         height: 35px;
         box-sizing: border-box;
     }
