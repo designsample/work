@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/ic_fav.png" />
+    <link rel="bookmark" href="img/ic_fav.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ISBN</title>
+    <meta name="keywords" content="全國新書資訊網,ISBN,申請ISBN,線上申請,書目下載,書目資料庫,電子書,國際標準書號,國際標準錄音錄影資料代碼,ISRC" />
+    <meta name="description" content="ISBN線上申請、書目資料庫下載與查詢" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!--     <link rel="stylesheet" href="css/docs.theme.min.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min 2.js"></script> -->
+    <!--js順序有差要注意-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/miller_code.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">選單切換</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-text">選單</span>
+                </button>
+                <button type="button" class="navbar-toggle navbar-language">En</button>
+                <h1 class="logo"><a class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
+            </div>
+            <!-- 手機隱藏選單區 -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse wrapper-menu">
+                <!-- 主選單 -->
+                <ul class="nav navbar-nav main-menu">
+                    <li><a href="2.1.1-IntroISBN.html">服務項目</a></li>
+                    <li><a href="3.1-MemberLogin.html">線上申請</a></li>
+                    <li><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a href="5.2-WholeDownload.html">書目下載</a></li>
+                    <li><a href="6.2.1-SortByStroke.html">出版機構網</a></li>
+                    <li><a href="7.2.1-NewBookIssue.html">出版品</a></li>
+                    <li class="active"><a href="8.1-ISBNChangeCode.html">工具與資源</a></li>
+                    <!-- <li class="dropdown">   
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open">&ensp;</span>大項次 
+                            <b class="caret"></b></a>   
+                        <ul class="dropdown-menu">
+                            <li><a href="">次項目</a></li>
+                            <li><a href="">次項目</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- 次選單 -->
+                <ul class="nav navbar-nav sub-menu">
+                    <li><a href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
+                    <li><a class="btn-language hidden-xs" href="">English</a></li>
+                </ul>
+            </div>
+            <!-- 手機隱藏選單區結束 -->
+            <script type="text/javascript">
+            var $ofweidht = innerWidth; //取得螢幕寬度
+            if ($ofweidht <= 768) { //設定判斷條件，大於等於1280時frametop的CSS屬性為block
+                document.getElementById("logoImg").src = 'img/logo-smallz.png';
+            } else {
+                document.getElementById("logoImg").src = 'img/logo.png';
+            }
+            </script>
+        </div>
+    </nav>
+    <!--nav結束-->
+    <section class="search-books mh-30">
+        <div class="container">
+            <div class="row">
+                <!--左欄開始-->
+                <div class="search-left col-xs-12 col-lg-3">
+                    <div class="panel panel-ISBN">
+                        <h2 class="title-left-ISBN">工具與資源</h2>
+                        <ul class="ul_listnone list-ISBN">
+                            <li>
+                                <h3 class="list-subLink-ISBN"><a href="8.1-ISBNChangeCode.html">ISBN&nbsp;10&amp;13碼轉換</a></h3>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+
+                                    <a type="button" id="Test01" onclick="openCitymotherChild('classGroup', 'unfolded_1', 'span01')">得獎好書<span id="span01" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_1">
+                                    <li>
+                                        <a href="8.2.1-Top1.html">國圖臺灣出版TOP1</a>
+                                    </li>
+                                    <li>
+                                        <a href="">《臺灣出版與閱讀》出版社選書</a>
+                                    </li>
+                                    <li>
+                                        <a href="">文化部金鼎獎-圖書類</a>
+                                    </li>
+                                    <li>
+                                        <a href="">文化部金鼎獎-優良圖書出版品推薦</a>
+                                    </li>
+                                    <li>
+                                        <a href="">中小學生優良課外讀物推介</a>
+                                    </li>
+                                    <li>
+                                        <a href="">金漫獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">經濟部金書獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國民健康署健康好書</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國家文官學院每月一書</a>
+                                    </li>
+                                    <li>
+                                        <a href="">好書大家讀</a>
+                                    </li>
+                                    <li>
+                                        <a href="">教育部美感教育推薦書單</a>
+                                    </li>
+                                    <li>
+                                        <a href="">台北國際書展大獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">開卷好書獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">兒童文學牧笛獎</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國立臺灣文學館文學好書推廣專案</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Openbook好書獎</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+
+                                    <a type="button" id="Test02" onclick="openCitymotherChild('classGroup', 'unfolded_2', 'span02')">每日預告書訊<span id="span02" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_2">
+                                    <li>
+                                        <a href="">服務說明</a>
+                                    </li>
+                                    <li>
+                                        <a href="8.3.2-DailyNews.html">2018-08-21</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-20</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-17</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-16</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-15</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-14</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2018-08-13</a>
+                                    </li>
+                                    <li>
+                                        <a href="">修改個人閱讀興趣</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3 class="list-subLink-ISBN"><a href="8.4-QnA.html">Q &amp;A</a></h3>
+                            </li>
+                            <li>
+                                <h3 class="list-subLink-ISBN">
+                                    <a href="8.5-HowToVideos.html">宣導短片<span id="span03" class="unfoldedb"></span></a>
+                                </h3>
+                            </li>
+                            <li class="TestClass">
+                                <h3 class="list-subLink-ISBN">
+                                    <a type="button" id="Test04" onclick="openCitymotherChild('classGroup', 'unfolded_4', 'span04')">相關網站連結<span id="span04" class="unfoldedb"></span></a>
+                                </h3>
+                                <ul class="menu-left-sub ul_listnone classGroup" role="menu" id="unfolded_4">
+                                    <li>
+                                        <a href="https://www.isbn-international.org" target="_blank">International ISBN Agency 國際標準書號中心總部<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ifpi.org/" target="_blank">IFPI國際錄音錄影資料總部<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.tipo.gov.tw" target="_blank">經濟部智慧財產局<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.gs1tw.org" target="_blank">商品條碼策進會<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.moc.gov.tw/content_355.html" target="_blank">文化部（人文及出版司）<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://tpi.culture.tw/" target="_blank">臺灣出版資訊網-TPI<br>(開新分頁)</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.issn.org/" target="_blank">ISSN International Centre 國際標準期刊號中心總部<br>(開新分頁)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /工具與資源 -->
+                </div>
+                <!-- /search-left左欄-->
+                <!-- search-right右欄-->
+                <div class="search-right col-xs-12 col-lg-9">
+                    <div class="title-right-ISBN">
+                        <h2>Q&amp;A</h2>
+                    </div>
+                    <div class="content-intro">
+                        <div class="btngroup-stroke">
+                            <div class="btn-group">
+                                <a class="btn btn-blue" href="#ISBNQnA">ISBN&nbsp;Q&amp;A</a>
+                                <a class="btn btn-blue" href="#CIPQnA">CIP&nbsp;Q&amp;A</a>
+                                <a class="btn btn-blue" href="#ISSNQnA">ISSN&nbsp;Q&amp;A</a>
+                            </div>
+                        </div>
+                        <h4 id="ISBNQnA" class="text-right-ISBN">ISBN&emsp;Q&amp;A</h4>
+                        <div class="col-xs-12">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse1" class="">1.問：如何申請國際標準書號（ISBN）？</a>
+                                    </div>
+                                    <div id="Collapse1" class="panel-body panel-collapse collapse">
+                                        <div class="div-table">
+                                            <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                            <div class="td p-0">出版圖書之公司行號、政府機關、團體會社、個人等出版者，可在圖書正式出版前3個月內，填寫「國際標準書號/出版品預行編目申請單」，再附印刷前排版定稿之書名頁、版權頁、目次、序言（或部分內容）等附件之清樣影本；其他媒體則需附出版品標籤，例如光碟需附光碟上之圓形標籤影本。若出版者為第一次申請ISBN，請增加填寫「出版者識別號資料申請單」。相關申請表單及附件備妥後，請以傳真、郵寄或親自送件等方式向國家圖書館國際標準書號中心申辦ISBN。相關申請表單請至「<a href="">全國新書資訊網</a>」首頁「<a href="">下載專區</a>」下載。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse2" class="">2.問：那些圖書資料不適用於國際標準書號（ISBN）的範圍？</a>
+                                    </div>
+                                    <div id="Collapse2" class="panel-body panel-collapse collapse">
+                                        <div class="div-table">
+                                            <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                            <div class="td p-0">不適用範圍包括：
+                                                <ol>
+                                                    <li>小冊子、未滿20頁的圖書。</li>
+                                                    <li>短暫性出版品，如：中小學教科書、考試題庫、筆記書、禮物書、習作本、習字簿、日記簿、行事曆、家計簿、日曆、農民曆、海報、散頁、戲劇和音樂會節目表、課程表、表格及著色畫、明信片、萬用卡等。</li>
+                                                    <li>音樂作品，如：錄音帶、唱片、光碟及單張樂譜。</li>
+                                                    <li>以宣傳為主的印刷品，如：簡介、導覽、展覽目錄、商品目錄、說明書、價目表、傳單等。</li>
+                                                    <li>連續性出版品，如：報紙、期刊、雜誌等。(請逕至<a href="https://portal.issn.org/">ISSN專屬網址</a>辦理)。（https://portal.issn.org/）</li>
+                                                    <li>無文字說明的藝術複製品。</li>
+                                                    <li>抽印本、手稿本。</li>
+                                                    <li>電子佈告欄、電子郵件及其他即時通訊軟體等。</li>
+                                                    <li>各類遊戲軟體及用品等。</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse3" class="">3.問：如何查詢申辦國際標準書號(ISBN) 暨出版品預行編目（CIP）的進度？</a>
+                                    </div>
+                                    <div id="Collapse3" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">出版單位可至「全國新書資訊網」（http://isbn.ncl.edu.tw） 點選「申請進度查詢(免帳號)」輸入出版機構簡稱、書名，即可查詢目前申辦進度。若已完成即可直接列印或下載取得國際標準書號(ISBN)及預行編目(CIP)資料。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse4" class="">4.問：請問個人可以申請國際標準書號（ISBN）及出版品預行編目(CIP)嗎？</a>
+                                    </div>
+                                    <div id="Collapse4" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            可以。凡在中華民國境內依法出版圖書之公司行號、政府機關、團體會社、個人等出版者，均能申請國際標準書號(ISBN)。
+                                            <a href="http://nclfile.ncl.edu.tw/files/201511/b7b79220-3540-474a-8eca-e7d09d2b0f86.pdf" target="_blank">＊「全國出版品國際標準書號及預行編目作業要點」</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse5" class="">5.問：再版書和重印書有何不同？都可重新申請國際標準書號(ISBN)嗎？</a>
+                                    </div>
+                                    <div id="Collapse5" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            所謂再版書，是指新版與原版內容有所更新或增補，並非文字勘誤而已。再版書必須重新申請ISBN。 如果只是重印再刷（reprint），內容無任何變動，就是所謂的重印書，重印書只要沿用舊號碼即可，不需要重新申請。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse6" class="">6.問：會議論文集可以申請國際標準書號(ISBN)嗎？</a>
+                                    </div>
+                                    <div id="Collapse6" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            刊載內容以具學術性價值且公開出版之會議文獻，可申請國際標準書號(ISBN)；其他有關會議議程、會議簡報及出席人員等手冊資訊，無須申請國際標準書號(ISBN)。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse7" class="">7.問：坊間出售圖書印在封面底的條碼，應如何申請？</a>
+                                    </div>
+                                    <div id="Collapse7" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            一般坊間出售圖書之條碼，大都以圖書之國際標準書號（ISBN），轉換成商品條碼而來。出版者向本館書號中心申請、取得ISBN號碼後，請排版或印刷公司將ISBN號碼轉換成商品條碼即可。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse8" class="">8.問：已經取得ISBN或CIP資料之新書，出版後因故變更裝訂形式、定價或書名，如何辦理？</a>
+                                    </div>
+                                    <div id="Collapse8" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            答：請依「圖書館法」第十五條規定，於出版品發行時送存一份給國家圖書館，本館收到圖書後，會依實際送存到館之圖書，於系統上更新其異動書目資訊。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0 m-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse9" class=""></a>
+                                    </div>
+                                    <div id="Collapse9" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0 m-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse10" class=""></a>
+                                    </div>
+                                    <div id="Collapse10" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 id="CIPQnA" class="text-right-ISBN">CIP&nbsp;Q&amp;A</h4>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse11" class="">1.問：何謂出版品預行編目（CIP）？</a>
+                                    </div>
+                                    <div id="Collapse11" class="panel-body panel-collapse collapse">
+                                        <div class="div-table">
+                                            <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                            <div class="td p-0">出版品預行編目（Cataloging in Publication，簡稱CIP），出版者在新書出版前，將毛裝本（清樣本）或正文前的書名頁、版權頁、目次、序、前言、摘要等相關資料，先送到<a href="">國家圖書館</a>（或負責辦理CIP業務之圖書館，我國為<a href="">國家圖書館國際標準書號中心</a>）予以編目，並於該新書內某一固定位置上印出CIP書目資料的一項措施。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse12" class="">2.問：出版品預行編目（CIP）的功用？</a>
+                                    </div>
+                                    <div id="Collapse12" class="panel-body panel-collapse collapse">
+                                        <div class="div-table">
+                                            <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                            <div class="td p-0">
+                                                （一）對圖書館而言
+                                                <ol>
+                                                    <li>提供最新穎書目資訊，以為各館選書、購書之參考資源。</li>
+                                                    <li>提供各圖書館圖書分類編目的參考，加速編目作業流程，節省人力物力。</li>
+                                                    <li>提高書目資料的品質，達到書目控制的目的。</li>
+                                                    <li>縮短書目技術服務時程，使新書迅速上架，提升閱覽流通服務功能。</li>
+                                                    <li>方便讀者查詢完整的新書資訊，掌握新知出版脈動。</li>
+                                                </ol>
+                                                （二）對出版業而言
+                                                <ol>
+                                                    <li>適於電腦管理作業
+                                                        <br>圖書經過預行編目，書目資料較符合標準化、規格化，能發揮圖書管理、庫存、銷售與統計等功效。</li>
+                                                    <li>提高圖書銷售量
+                                                        <br>消費者經由CIP新書預告，易於掌握最新出版訊息，能提高出版品的銷售量。</li>
+                                                    <li>提升國際市場的發行潛力
+                                                        <br>新書資訊透過網際網路的傳播，能快速地進入國際市場，使出版者較易了解市場動態，掌握出版趨勢。</li>
+                                                </ol>
+                                                （三）對一般使用者而言
+                                                <ol>
+                                                    <li>幫助讀者迅速了解該書主題內容。</li>
+                                                    <li>促進書目資料標準性，使讀者便於查詢。</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse13" class="">3.問：編製出版品預行編目（CIP）的依據？</a>
+                                    </div>
+                                    <div id="Collapse13" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">目前出版品預行編目著錄依據的規範工具書如下:
+                                            <br> （一）記述編目
+                                            <ol>
+                                                <li><a href="http://catweb.ncl.edu.tw/portal_e3_cnt_page.php?button_num=e3&folder_id=223&cnt_id=638&sn_judge=1" target="_blank">中國編目規則</a> / 圖書館自動化作業規劃委員會中國編目規則研訂小組研訂 ; 中華民國圖書館學會分類編目委員會增修. --第三版. --臺北市 : 中華民國圖書館學會, 民94.10。</li>
+                                                <li>中國編目規則第三版使用手冊 / 國家圖書館, 中華民國圖書館學會分類編目委會編撰. --初版. --臺北市 : 國家圖書館, 民97.10。</li>
+                                            </ol>
+                                            （二）主題編目
+                                            <ol>
+                                                <li>〔分類〕<a href="http://catweb.ncl.edu.tw/portal_e3_cnt.php?button_num=e3&folder_id=28" target="_blank">中文圖書分類法</a>. 2007年版 / 《中文圖書分類法》(2007年版)修訂委員會修訂. –初版. --臺北市 : 國家圖書館, 民96.12。</li>
+                                                <li>〔主題〕<a href="http://catweb.ncl.edu.tw/portal_e3_cnt_page.php?button_num=e3&folder_id=73&cnt_id=123&sn_judge=1" target="_blank">中文主題詞表</a>. 2005年修訂版 / 中文主題詞表編訂小組編訂. --修訂初版. --臺北市 : 國家圖書館, 民94.10。</li>
+                                            </ol>
+                                            （三）書目資料建檔
+                                            <ol>
+                                                <li>
+                                                    <a href="http://catweb.ncl.edu.tw/portal_e3_cnt.php?button_num=e3&folder_id=56" target="_blank">中國機讀編目格式</a> / 國立中央圖書館中國機讀編目格式修訂小組編撰. --第三版. --臺北市 : 國立中央圖書館, 民78.10。
+                                                </li>
+                                            </ol>
+                                            （四）「資訊組織規範」專屬網站
+                                            <ol>
+                                                <li>
+                                                    「<a href="" target="_blank">國家圖書館．編目園地</a>」，資訊組織規範之編目規範。
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse14" class="">4.問：如何下載出版品預行編目（CIP）資料？</a>
+                                    </div>
+                                    <div id="Collapse14" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            出版單位可至「<a href="http://isbn.ncl.edu.tw" target="_blank">全國新書資訊網</a>」（<a href="http://isbn.ncl.edu.tw" target="_blank">http://isbn.ncl.edu.tw</a>）點選「申請進度查詢(免帳號) 」輸入出版機構簡稱或書名，點選檢視卡片或下載卡片。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse15" class="">5.問：出版品預行編目（CIP）之主題詞如何產生？</a>
+                                    </div>
+                                    <div id="Collapse15" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            「主題詞」屬於控制詞彙，與關鍵詞不盡相同，主題詞之擇取，除參考出版單位提供之關鍵詞外，亦可查詢「<a href="http://catbase.ncl.edu.tw/App3" target="_blank">國家圖書館中文主題編目規範系統</a>」，或參考查詢「國家圖書館．編目園地」之「資訊組織規範」下「<a href="http://catweb.ncl.edu.tw/portal_e3_cnt_page.php?button_num=e3&folder_id=73&cnt_id=123&sn_judge=1" target="_blank">中文主題詞表</a>」電子版。
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 id="ISSNQnA" class="text-right-ISBN">ISSN&nbsp;Q&amp;A</h4>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse16" class="">1.問：何謂國際標準期刊號(ISSN)？</a>
+                                    </div>
+                                    <div id="Collapse16" class="panel-body panel-collapse collapse">
+                                        <div class="div-table">
+                                            <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                            <div class="td p-0">國際標準期刊號(International Standard Serial Number，簡稱ISSN)，是國際間賦予期刊的一套統一編號。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse17" class="">2.問：國際標準期刊號(ISSN)的編號範圍為何？</a>
+                                    </div>
+                                    <div id="Collapse17" class="panel-body panel-collapse collapse">
+                                        <div class="div-table">
+                                            <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                            <div class="td p-0">常見的期刊、雜誌、報紙、叢刊、年刊等大都屬於國際標準期刊號之編號範圍。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse18" class="">3.問：如何申請國際標準期刊號(ISSN)？</a>
+                                    </div>
+                                    <div id="Collapse18" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">臺灣地區並未設立國際標準期刊編號中心，業者如欲申請國際標準期刊號，可逕向法國巴黎的國際連續出版品中心(INTERNATIONAL CENTRE FOR THE REGISTRATION OF SERIAL PUBLICATIONS)申請。
+                                            <p>「線上申請」網址：<a href="https://portal.issn.org" target="_blank">https://portal.issn.org/</a></p>
+                                            <ul class="ul_listnone">
+                                                法國巴黎國際連續出版品中心連絡資料：
+                                                <li>機構名稱：ISSN INTERNATIONAL CENTRE</li>
+                                                <li>地址：45 rue de Turbigo</li>
+                                                <li>75003 Paris</li>
+                                                <li>France</li>
+                                                <li>電話：33 (01) 44 88 22 20</li>
+                                                <li>傳真：33 (01) 40 26 32 43</li>
+                                                <li>E-mail：issnic@issn.org</li>
+                                                <li>網址：<a href="http://www.issn.org" target="_blank">http://www.issn.org</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse19" class="c">4.問：</a>
+                                    </div>
+                                    <div id="Collapse19" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel b-0">
+                                    <div class="panel-heading bg-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#Collapse20" class="">5.問：</a>
+                                    </div>
+                                    <div id="Collapse20" class="panel-body panel-collapse collapse">
+                                        <div class="td p-0" style="min-width:3em">&emsp;答：</div>
+                                        <div class="td p-0">
+                                            
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- /問與答，手風琴展開區結束 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /手風琴/收合效果 包好包滿 -->
+                </div>
+                <!-- /每日新書 -->
+            </div>
+            <!-- /content-intro -->
+        </div>
+        <!-- /search-right 右欄-->
+        </div>
+        <!-- / row 整個內容-->
+        </div>
+        <!-- / container 整個內容 -->
+    </section>
+    <!-- / container 整個段落內容-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3 logo-link">
+                    <a href="https://www.ncl.edu.tw/"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
+                    <a href="index.html"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
+                    <a onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
+                </div>
+                <div class="col-xs-12 col-lg-9 footer-address">
+                    <div class="col-xs-12">
+                        <a href="">網站地圖</a>&emsp;|&emsp;<a href="">聯絡信箱</a>&emsp;|&emsp;<a href="">本館地圖及交通資訊</a>
+                        <div class="color-gray float-right">國家圖書館著作權聲明 Copyright © 2018 All rights reserved.</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-lg-4 color-white center">本館地址：10001臺北市中山南路20號</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">總機：(02)23619132</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">歡迎您，您是第 18078572 位拜訪者</div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="inline-block">線上看：<a href="">《臺灣出版與閱讀》</a>、<a href="">《全國新書資訊月刊》</a>、<a href="">每日預告書訊</a></div>
+                        <div class="float-right">更新日期：2018-06-27</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
