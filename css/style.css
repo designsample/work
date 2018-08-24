@@ -351,14 +351,16 @@
 
     .chosen-book {
         background: url(../img/bg-bookshelf.png);
-        background-position: center 12.5em;
+        background-position: center 20em;
+        background-position-x: center;
+        background-position-y: 17.5em;
         background-repeat: no-repeat;
     }
 
     .owl-nav {
         z-index: -2;
         position: absolute;
-        top: 80px;
+        top: 9em;
         width: 100%;
     }
 
@@ -380,20 +382,19 @@
     #demos .owl-carousel .item {
         overflow: hidden;
         vertical-align: middle;
-        height: 18rem;
-        height: 220px;
-        height: 18em;
+        height: 340px;
+        height: 24em;
         text-align: center;
         background: transparent;
         padding: 0;
     }
 
     #demos .owl-carousel .item>img {
-        height: 12rem;
+        height: 14.5em;
         width: auto;
         overflow: hidden;
         margin: 0 auto;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
 
     .chosen-book .owl-dots {
@@ -1315,6 +1316,9 @@
         margin: 0 auto;
         width: 100%;
     }
+    .display-block{
+        display: block;
+    }
 
 
     .b-0{
@@ -1330,7 +1334,7 @@
     }
 
     .p-0 {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .m-0 {
@@ -1440,6 +1444,10 @@
 
     .thumbnail {
         background-color: transparent;
+    }
+    .panel{
+        box-shadow: none;
+        -webkit-box-shadow:none;
     }
 
 
