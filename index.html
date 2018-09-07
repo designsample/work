@@ -11,8 +11,6 @@
     <meta name="keywords" content="全國新書資訊網,ISBN,申請ISBN,線上申請,書目下載,書目資料庫,電子書,國際標準書號,國際標準錄音錄影資料代碼,ISRC" />
     <meta name="description" content="ISBN線上申請、書目資料庫下載與查詢" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <!--     <link rel="stylesheet" href="css/docs.theme.min.css"> -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
@@ -39,32 +37,24 @@
                     <span class="icon-text">選單</span>
                 </button>
                 <button type="button" class="navbar-toggle navbar-language">En</button>
-                <h1 class="logo"><a class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
+                <h1 class="logo"><a title="回首頁" class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
             </div>
             <!-- 手機隱藏選單區 -->
             <div class="collapse navbar-collapse navbar-ex1-collapse wrapper-menu">
                 <!-- 主選單 -->
                 <ul class="nav navbar-nav main-menu">
-                    <li><a href="2.1.1-IntroISBN.html">服務項目</a></li>
-                    <li><a href="3.1-MemberLogin.html">線上申請</a></li>
-                    <li><a href="4.1.1-SearchBooks.html">書目資料庫</a></li>
-                    <li><a href="5.2-WholeDownload.html">書目下載</a></li>
-                    <li><a href="6.2.1-SortByStroke.html">出版機構網</a></li>
-                    <li><a href="7.2.1-NewBookIssue.html">出版品</a></li>
-                    <li><a href="8.1-ISBNChangeCode.html">工具與資源</a></li>
-                    <!-- <li class="dropdown">   
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open">&ensp;</span>大項次 
-                            <b class="caret"></b></a>   
-                        <ul class="dropdown-menu">
-                            <li><a href="">次項目</a></li>
-                            <li><a href="">次項目</a></li>
-                        </ul>
-                    </li> -->
+                    <li><a title="連結至：服務項目" href="2.1.1-IntroISBN.html">服務項目</a></li>
+                    <li><a title="連結至：線上申請" href="3.1-MemberLogin.html">線上申請</a></li>
+                    <li><a title="連結至：書目資料庫" href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a title="連結至：書目下載" href="5.2-WholeDownload.html">書目下載</a></li>
+                    <li><a title="連結至：出版機構網" href="6.2.1-SortByStroke.html">出版機構網</a></li>
+                    <li><a title="連結至：出版品" href="7.2.1-NewBookIssue.html">出版品</a></li>
+                    <li><a title="連結至：工具與資源" href="8.1-ISBNChangeCode.html">工具與資源</a></li>
                 </ul>
                 <!-- 次選單 -->
                 <ul class="nav navbar-nav sub-menu">
-                    <li><a href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
-                    <li><a class="btn-language hidden-xs" href="">English</a></li>
+                    <li><a title="按鈕：聯絡我們" target="_blank" href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
+                    <li><a title="Change to the English Version Web" target="_blank" class="btn-language hidden-xs" href="">English</a></li>
                 </ul>
             </div>
             <!-- 手機隱藏選單區結束 -->
@@ -84,29 +74,29 @@
             <div class="row">
                 <div class="col-xs-12 col-lg-6 col-lg-offset-3 search-block">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab1default" data-toggle="tab">書目資料查詢</a></li>
-                        <li><a href="#tab2default" data-toggle="tab">出版機構查詢</a></li>
-                        <li><a href="#tab3default" data-toggle="tab">申請進度查詢</a></li>
+                        <li class="active"><a title="頁籤：書目資料查詢" href="#tab1default" data-toggle="tab">書目資料查詢</a></li>
+                        <li><a title="頁籤：出版機構查詢" href="#tab2default" data-toggle="tab">出版機構查詢</a></li>
+                        <li><a title="頁籤：申請進度查詢" href="#tab3default" data-toggle="tab">申請進度查詢</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab1default">
                             <div class="col-xs-9 mt-20">
                                 <div class="input-group">
                                     <div class="input-group-btn input-group-border">
-                                        <select class="btn btn-default">
-                                            <option value="Title" href="#">書名&emsp;&emsp;&emsp;</option>
-                                            <option value="Author" href="#">作者</option>
-                                            <option value="PublisherShortTitle" href="#">出版者</option>
-                                            <option value="SubjHeading" href="#">標題(主題詞)</option>
-                                            <option value="SerialTitle" href="#">叢書名</option>
-                                            <option value="ClassNo" href="#">分類號</option>
-                                            <option value="ISBN" href="#">ISBN</option>
-                                            <option value="Date_Sales" href="#">確認出版年月</option>
-                                            <option value="PubMonth_Pre" href="#">預計出版年月</option>
+                                        <select title="書目資料查詢下拉選項" class="btn btn-default">
+                                            <option value="Title" selected="selected">書名&emsp;&emsp;&emsp;</option>
+                                            <option value="Author">作者</option>
+                                            <option value="PublisherShortTitle">出版者</option>
+                                            <option value="SubjHeading">標題(主題詞)</option>
+                                            <option value="SerialTitle">叢書名</option>
+                                            <option value="ClassNo">分類號</option>
+                                            <option value="ISBN">ISBN</option>
+                                            <option value="Date_Sales">確認出版年月</option>
+                                            <option value="PubMonth_Pre">預計出版年月</option>
                                         </select>
                                     </div>
                                     <!-- /btn-group -->
-                                    <input type="text" class="form-control" aria-label="輸入區域" placeholder="輸入 書名 / 作者 / ISBN……查詢">
+                                    <input id="searchA" title="輸入區域" type="text" value="searchArea" class="form-control" aria-label="輸入區域" placeholder="輸入 書名 / 作者 / ISBN……查詢">
                                 </div>
                                 <!-- /input-group -->
                             </div>
@@ -116,11 +106,7 @@
                             </div>
                             <!-- /右側搜尋按鈕 -->
                             <div class="col-xs-12 m-10">
-                                <a href="4.1.1-SearchBooks.html" class="btn btn-blue col-xs-12" data-toggle="dropdown">進階搜尋<span class="glyphicon glyphicon-plus"></span></a>
-                                <!-- <ul class="dropdown-menu col-xs-12" role="menu">
-                                    <li><a href="" data-toggle="tab">aaa</a></li>
-                                    <li><a href="" data-toggle="tab">bbb</a></li>
-                                </ul> -->
+                                <a title="按鈕：進階搜尋" href="" class="btn btn-blue col-xs-12" data-toggle="dropdown">進階搜尋<span class="glyphicon glyphicon-plus"></span></a>
                             </div>
                         </div>
                         <!--書目資料查詢-->
@@ -128,8 +114,8 @@
                             <div class="col-xs-9 mt-20">
                                 <div class="input-group">
                                     <div class="input-group-btn input-group-border">
-                                        <select class="btn btn-default">
-                                            <option value="ChiTitle, EngTitle" selected>全部欄位&emsp;</option>
+                                        <select title="搜尋選項" class="btn btn-default">
+                                            <option value="ChiTitle, EngTitle" selected="selected">全部欄位&emsp;</option>
                                             <option value="ChiTitle, EngTitle">全稱</option>
                                             <option value="ChiTitleShort">簡稱</option>
                                             <option value="Address, SaleRoomAddress, EngAddress">地址</option>
@@ -137,7 +123,7 @@
                                         </select>
                                     </div>
                                     <!-- /btn-group -->
-                                    <input type="text" class="form-control" aria-label="輸入區域" placeholder="輸入出版機構全稱 / 簡稱 / 地址 / 前綴號……查詢">
+                                    <input id="searchB" title="輸入區域" type="text" value="searchArea" class="form-control" aria-label="輸入區域" placeholder="輸入出版機構全稱 / 簡稱 / 地址 / 前綴號……查詢">
                                 </div>
                                 <!-- /input-group -->
                             </div>
@@ -147,7 +133,7 @@
                             </div>
                             <!-- /右側搜尋按鈕 -->
                             <div class="col-xs-12 m-10">
-                                <a href="#" class="btn btn-blue col-xs-12" data-toggle="dropdown">進階搜尋 <span class="glyphicon glyphicon-plus"></span></a>
+                                <a title="按鈕：進階搜尋" href="#" class="btn btn-blue col-xs-12" data-toggle="dropdown">進階搜尋 <span class="glyphicon glyphicon-plus"></span></a>
                                 <!-- <ul class="dropdown-menu col-xs-12" role="menu">
                                     <li><a href="" data-toggle="tab">aaa</a></li>
                                     <li><a href="" data-toggle="tab">bbb</a></li>
@@ -159,14 +145,14 @@
                             <div class="col-xs-9 mt-20">
                                 <div class="input-group">
                                     <div class="input-group-btn input-group-border">
-                                        <select class="btn btn-default">
-                                            <option value="PublisherShortTitle">出版機構&emsp;</option>
+                                        <select title="搜尋選項清單" class="btn btn-default">
+                                            <option value="PublisherShortTitle" selected="selected">出版機構&emsp;</option>
                                             <option value="ApplicationID">掛號單號</option>
                                             <option value="Title">申請書名</option>
                                         </select>
                                     </div>
                                     <!-- /btn-group -->
-                                    <input type="text" class="form-control" aria-label="輸入區域" placeholder="">
+                                    <input id="searchC" title="輸入區域" type="text" value="searchArea" class="form-control" aria-label="輸入區域" placeholder="">
                                 </div>
                                 <!-- /input-group -->
                             </div>
@@ -194,95 +180,95 @@
                             <h2>線上申請 ISBN / CIP</h2>
                             <p class="normal-text">國際標準書號(ISBN) / 出版品預行編目(CIP)</p>
                             <div class="col-xs-12 p-0">
-                                <a href="" class="btn btn-blue col-xs-6">已有出版單位帳號</a>
-                                <a href="" class="btn btn-blue col-xs-6">申請帳號</a>
+                                <a title="開新分頁至：已有出版單位帳號" target="_blank" href="" class="btn btn-blue col-xs-6">已有出版單位帳號</a>
+                                <a title="開新分頁至：申請帳號" target="_blank" href="" class="btn btn-blue col-xs-6">申請帳號</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 link-1">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="開新分頁至：國際標準書號" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-ISBN.png">
                             <h2>國際標準書號</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">ISBN 編號準則</a></li>
-                                <li><a href="" class="normal-a">申請流程</a></li>
+                                <li><a title="開新分頁至：ISBN 編號準則" target="_blank" href="" class="normal-a">ISBN 編號準則</a></li>
+                                <li><a title="開新分頁至：申請流程" target="_blank" href="" class="normal-a">申請流程</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 link-2">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="開新分頁至：出版品預行編目" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-CIP.png">
                             <h2>出版品<br>預行編目</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">出版品預行編目準則</a></li>
-                                <li><a href="" class="normal-a">申請流程</a></li>
+                                <li><a title="開新分頁至：出版品預行編目準則" target="_blank" href="" class="normal-a">出版品預行編目準則</a></li>
+                                <li><a title="開新分頁至：申請流程" target="_blank" href="" class="normal-a">申請流程</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 link-3">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="開新分頁至：國際標準錄音錄影資料代碼" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-ISRC.png">
                             <h2>國際標準錄音<br>錄影資料代碼</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">ISRC說明</a></li>
-                                <li><a href="" class="normal-a">ISRC國際標準錄音錄影資料代碼查詢系統</a></li>
+                                <li><a title="ISRC說明" target="_blank" href="" class="normal-a">ISRC說明</a></li>
+                                <li><a title="ISRC國際標準錄音錄影資料代碼查詢系統" target="_blank" href="" class="normal-a">ISRC國際標準錄音錄影資料代碼查詢系統</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6">
                     <div class="col-xs-12 link-4">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="開新分頁至：常見問題" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-question.png">
                             <h2>常見問題</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">如何申請國際標準書號(ISBN)</a></li>
-                                <li><a href="" class="normal-a">如何查詢申辦國際標準書號(ISBN) 暨出版品預行編目（CIP）的進度</a></li>
+                                <li><a title="開新分頁至：如何申請國際標準書號(ISBN)" target="_blank" href="" class="normal-a">如何申請國際標準書號(ISBN)</a></li>
+                                <li><a title="開新分頁至：如何查詢申辦國際標準書號(ISBN) 暨出版品預行編目（CIP）的進度" target="_blank" href="" class="normal-a">如何查詢申辦國際標準書號(ISBN) 暨出版品預行編目（CIP）的進度</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 link-5">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="開新分頁至：表單下載" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-downloadDoc.png">
                             <h2>表單下載</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">出版者識別號資料申請單</a></li>
-                                <li><a href="" class="normal-a">國際標準書號/出版品預行編目(ISBN/CIP)申請單</a></li>
+                                <li><a title="開新分頁至：出版者識別號資料申請單" target="_blank" href="" class="normal-a">出版者識別號資料申請單</a></li>
+                                <li><a title="開新分頁至：國際標準書號/出版品預行編目(ISBN/CIP)申請單" target="_blank" href="" class="normal-a">國際標準書號/出版品預行編目(ISBN/CIP)申請單</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 link-6">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="書目資料下載" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-downloadBook.png">
                             <h2>書目資料下載</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">10筆內(免帳號)</a></li>
-                                <li><a href="" class="normal-a">10筆以上(登入/申請帳號)</a></li>
-                                <li><a href="" class="normal-a">查看新書書目</a></li>
+                                <li><a title="開新分頁至：10筆內(免帳號)" target="_blank" href="" class="normal-a">10筆內(免帳號)</a></li>
+                                <li><a title="開新分頁至：10筆以上(登入/申請帳號)" target="_blank" href="" class="normal-a">10筆以上(登入/申請帳號)</a></li>
+                                <li><a title="開新分頁至：查看新書書目" target="_blank" href="" class="normal-a">查看新書書目</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 link-7">
-                        <a href="" class="col-xs-12 col-md-5 valign">
+                        <a title="每日預告書訊" target="_blank" href="" class="col-xs-12 col-md-5 valign">
                             <img alt="圖標" src="img/ic-book.png">
                             <h2>每日預告書訊</h2>
                         </a>
                         <div class="col-xs-12 col-md-7 valign">
                             <ul>
-                                <li><a href="" class="normal-a">訂閱每日預告書訊</a></li>
-                                <li><a href="" class="normal-a">修改個人閱讀興趣</a></li>
+                                <li><a title="開新分頁至：訂閱每日預告書訊" target="_blank" href="" class="normal-a">訂閱每日預告書訊</a></li>
+                                <li><a title="開新分頁至：修改個人閱讀興趣" target="_blank" href="" class="normal-a">修改個人閱讀興趣</a></li>
                             </ul>
                         </div>
                     </div>
@@ -301,37 +287,37 @@
                         <h3 class="index-title">最新消息</h3>
                         <div class="bookheight">
                             <div class="list-table">
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-06-11</div>
                                     <div>出版機構委託他單位代申請ISBN暨CIP業務，請檢附授權委託書</div>
                                 </a>
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-06-08</div>
                                     <div>107年5月申辦ISBN暨CIP統計分析</div>
                                 </a>
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-06-08</div>
                                     <div>107年4月申辦ISBN暨CIP統計分析</div>
                                 </a>
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-05-08</div>
                                     <div>國際書展與年度出版回顧－《臺灣出版與閱讀》107年第1期出刊</div>
                                 </a>
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-04-20</div>
                                     <div>出版機構委託他單位代申請ISBN暨CIP業務，請檢附授權委託書</div>
                                 </a>
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-06-08</div>
                                     <div>107年5月申辦ISBN暨CIP統計分析</div>
                                 </a>
-                                <a href="" class="normal-a">
+                                <a title="開新分頁至：本則最新消息" target="_blank" href="" class="normal-a">
                                     <div>2018-05-18</div>
                                     <div>107年4月申辦ISBN暨CIP統計分析</div>
                                 </a>
                             </div>
                         </div>
-                        <a href="" class="btn btn-blue col-xs-12">更多</a>
+                        <a title="開新分頁至：最新消息看更多" target="_blank" href="" class="btn btn-blue col-xs-12">更多</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-5 pull-right index-booknews">
@@ -339,56 +325,56 @@
                     <div class="bookheight">
                         <div class="list-table">
                             <div class="booklist">
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁連結至分類：臺灣研究" target="_blank" href="" class="booklist-cell normal-a">
                                     <div>臺灣研究</div>
                                 </a>
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁至：此書" target="_blank" href="" class="booklist-cell normal-a">
                                     <div class="bold-text">10+島款款行: 四季X五感 離離離島出海放風</div>
                                     <div>微笑台灣編輯團隊作 / 天下雜誌 / 9789863983521 / 733.69 / 2018-07-00</div>
                                 </a>
                             </div>
                             <div class="booklist">
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁連結至分類：飲食健康" target="_blank" href="" class="booklist-cell normal-a">
                                     <div>飲食健康</div>
                                 </a>
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁至：此書" target="_blank" href="" class="booklist-cell normal-a">
                                     <div class="bold-text">0~5歲味覺平衡訓練法</div>
                                     <div>TOKEIJI千繪著; 蔡麗蓉譯 / 采實文化 / 9789869501828 / 411.3 / 2017-07-00</div>
                                 </a>
                             </div>
                             <div class="booklist">
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁連結至分類：其他" target="_blank" href="" class="booklist-cell normal-a">
                                     <div>其他</div>
                                 </a>
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁至：此書" target="_blank" href="" class="booklist-cell normal-a">
                                     <div class="bold-text">樂在種菜
                                         <<園藝之友>>: 雙月刊家庭蔬菜栽培選集</div>
                                     <div>農友社會福利基金會 / 9789868761773 / 435.2 / 2018-07-00</div>
                                 </a>
                             </div>
                             <div class="booklist">
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁連結至分類：各類文學" target="_blank" href="" class="booklist-cell normal-a">
                                     <div>各類文學</div>
                                 </a>
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁至：此書" target="_blank" href="" class="booklist-cell normal-a">
                                     <div class="bold-text">名偵探福爾摩斯. 4, 跳舞人形暗號</div>
                                     <div>亞瑟.柯南.道爾原著; 蘆邊拓編著; 城咲綾繪圖; 張東君翻譯 / 小熊 / 初版 / 9789578640382 / 873.59 / 2018-09-00</div>
                                 </a>
                             </div>
                             <div class="booklist">
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁連結至分類：其他" target="_blank" href="" class="booklist-cell normal-a">
                                     <div>其他</div>
                                 </a>
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁至：此書" target="_blank" href="" class="booklist-cell normal-a">
                                     <div class="bold-text">醫療問題與生命法學</div>
                                     <div>廖又生著 / 亞東技術學院 / 初版 / 9789869666916 / 412.21 / 2018-07-00</div>
                                 </a>
                             </div>
                             <div class="booklist">
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁連結至分類：其他" target="_blank" href="" class="booklist-cell normal-a">
                                     <div>其他</div>
                                 </a>
-                                <a href="" class="booklist-cell normal-a">
+                                <a title="開新分頁至：此書" target="_blank" href="" class="booklist-cell normal-a">
                                     <div class="bold-text">樂在種菜
                                         <<園藝之友>>: 雙月刊家庭蔬菜栽培選集</div>
                                     <div>農友社會福利基金會 / 9789868761773 / 435.2 / 2018-07-00</div>
@@ -396,7 +382,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="" class="btn btn-blue col-xs-12">更多</a>
+                    <a title="按鈕：連結至最新預告書訊看更多" target="_blank" href="" class="btn btn-blue col-xs-12">更多</a>
                 </div>
             </div>
             <!-- /row-->
@@ -412,62 +398,62 @@
                     <div class="owl-carousel owl-theme">
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/1.jpeg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/3.jpeg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/4.jpeg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/5.jpeg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/6.jpeg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/3.jpeg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                         <div class="item">
                             <img alt="CCC創作集 復刊試刊號 封面" src="img/2.jpg">
-                            <a href="">CCC創作集 復刊試刊號</a>
+                            <a title="開新分頁至：CCC創作集資訊" target="_blank" href="">CCC創作集 復刊試刊號</a>
                             <p><span class="glyphicon glyphicon-user"></span>61Chi, AKRU, Kinon</p>
                         </div>
                     </div>
@@ -504,13 +490,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-lg-3 logo-link">
-                    <a href="https://www.ncl.edu.tw/"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
-                    <a href="index.html"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
-                    <a onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
+                    <a title="新視窗開啟：國家圖書館首頁" href="https://www.ncl.edu.tw/" target="_blank"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
+                    <a title="新視窗開啟：ISBN新書資訊網首頁" href="index.html" target="_blank"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
+                    <a title="回頂端按鈕" onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
                 </div>
                 <div class="col-xs-12 col-lg-9 footer-address">
                     <div class="col-xs-12">
-                        <a href="">網站地圖</a>&emsp;|&emsp;<a href="">聯絡信箱</a>&emsp;|&emsp;<a href="">本館地圖及交通資訊</a>
+                        <a title="新分頁開啟：網站地圖" target="_blank" href="">網站地圖</a>&emsp;|&emsp;<a title="新分頁開啟：聯絡信箱" target="_blank" href="">聯絡信箱</a>&emsp;|&emsp;<a title="新分頁開啟：本館地圖及交通資訊" target="_blank" href="">本館地圖及交通資訊</a>
                         <div class="color-gray float-right">國家圖書館著作權聲明 Copyright © 2018 All rights reserved.</div>
                         <div class="clear"></div>
                     </div>
@@ -520,7 +506,7 @@
                         <div class="col-xs-12 col-lg-4 color-white center">歡迎您，您是第 18078572 位拜訪者</div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="inline-block">線上看：<a href="">《臺灣出版與閱讀》</a>、<a href="">《全國新書資訊月刊》</a>、<a href="">每日預告書訊</a></div>
+                        <div class="inline-block">線上看：<a title="新分頁開啟：《臺灣出版與閱讀》" target="_blank" href="">《臺灣出版與閱讀》</a>、<a title="新分頁開啟：《全國新書資訊月刊》" target="_blank" href="">《全國新書資訊月刊》</a>、<a title="新分頁開啟：每日預告書訊" target="_blank" href="">每日預告書訊</a></div>
                         <div class="float-right">更新日期：2018-06-27</div>
                         <div class="clear"></div>
                     </div>

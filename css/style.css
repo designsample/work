@@ -3,19 +3,24 @@
         font-family: "WenQuanYi Zen Hei", "文泉驛正黑", "Heiti TC", "黑體-繁", "LiHei Pro", "儷黑 Pro", "PingFang TC", "Droid Sans", "Roboto", "Microsoft JhengHei", "微軟正黑體";
         word-break: break-word;
     }
+
     body {}
+
     a {
         cursor: pointer;
         color: #fd7b00;
     }
+
     a:hover,
     a:focus {
         cursor: pointer;
         color: #e04e01;
     }
+
     a:active {
         cursor: pointer;
     }
+
     .navbar-header {
         z-index: 80;
     }
@@ -524,7 +529,8 @@
         width: 100%;
         height: 60px;
         vertical-align: middle;
-        display: inline-flex;
+        display: flex;
+        align-items: center;
     }
 
     .title-right-ISBN>:nth-child(1n) {
@@ -533,7 +539,6 @@
         font-size: 18px;
         vertical-align: middle;
         display: inline-flex;
-        line-height: 60px;
     }
 
     .title-right-ISBN>a::after {
@@ -627,11 +632,13 @@
         margin: 0 auto;
     }
     /*依筆畫*/
-    .btngroup-stroke .btn-group{
+
+    .btngroup-stroke .btn-group {
         margin-bottom: 10px;
     }
-    .btngroup-stroke .btn-group .btn{
-        border-color: transparent; 
+
+    .btngroup-stroke .btn-group .btn {
+        border-color: transparent;
     }
     /*所有簡介類型content-intro*/
 
@@ -1159,15 +1166,15 @@
             margin-top: 40px;
             background: url(../img/bg-footer4.png);
             background-position: calc( (100% - 1150px)/2 - 157px) 0px;
-            background-repeat:no-repeat;
+            background-repeat: no-repeat;
         }
     }
     /*當螢幕大於1200px時*/
 
     @media screen and (min-width:1200px) {
-        .search-books{
-        min-height: calc( 100vh - 368px );
-    }
+        .search-books {
+            min-height: calc( 100vh - 368px);
+        }
         .navbar {
             height: 134px;
             margin-bottom: 0;
@@ -1316,15 +1323,17 @@
         margin: 0 auto;
         width: 100%;
     }
-    .display-block{
+
+    .display-block {
         display: block;
     }
 
 
-    .b-0{
-        border:0px;
+    .b-0 {
+        border: 0px;
         border-color: transparent;
     }
+
     .p-hr {
         padding: 1em 0;
     }
@@ -1356,6 +1365,7 @@
     .mt-20 {
         margin-top: 20px;
     }
+
     .mb-10 {
         margin-bottom: 10px;
     }
@@ -1363,6 +1373,7 @@
     .mb-30 {
         margin-bottom: 30px;
     }
+
     .mb-40 {
         margin-bottom: 40px;
     }
@@ -1445,9 +1456,10 @@
     .thumbnail {
         background-color: transparent;
     }
-    .panel{
+
+    .panel {
         box-shadow: none;
-        -webkit-box-shadow:none;
+        -webkit-box-shadow: none;
     }
 
 
@@ -1464,6 +1476,51 @@
 
     .clear {
         float: none;
+    }
+    /*div table*/
+    /*預設寬100%*/
+
+    .divtable {
+        display: table;
+        width: 100%;
+    }
+
+    .divtable .thead {
+        display: table-header-group;
+    }
+
+    .divtable .tbody {
+        display: table-row-group;
+    }
+
+    .divtable .tfooter {
+        display: table-footer-group;
+    }
+
+    .divtable .tr {
+        display: table-row;
+    }
+    /*預設邊距*/
+
+    .divtable .th,
+    .divtable .td {
+        display: table-cell;
+        padding: 15px 5px;
+    }
+    /*表格標題，只能在table標籤下有一個，建議用title取代*/
+
+    .divtable .caption {
+        display: table-caption;
+        text-align: center;
+    }
+
+    .divtable .col {
+        display: table-column;
+    }
+    /*選取幾欄*/
+
+    .divtable .colgroup {
+        display: table-column-group;
     }
     /*RWD table*/
 
@@ -1519,38 +1576,39 @@
 
     .table-searchoptions {}
 
-    .table-searchoptions tr td:nth-child(1n) {
+    .table-searchoptions .tr .td:nth-child(1n) {
         padding: 5px;
         line-height: 1;
         vertical-align: middle;
         box-sizing: border-box;
     }
 
-    .table-searchoptions tr td p,
-    .table-searchoptions tr td a {
+    .table-searchoptions .tr .td p,
+    .table-searchoptions .tr .td a {
         display: block;
         margin: 0;
         line-height: 35px;
     }
 
-    .table-searchoptions tr td select {
+    .table-searchoptions .tr .td select {
         width: 100%;
     }
 
-    .table-searchoptions tr td>:nth-child(1n) ,.select-normal{
+    .table-searchoptions .tr .td>:nth-child(1n),
+    .select-normal {
         height: 35px;
         box-sizing: border-box;
     }
 
-    .table-searchoptions tr td:nth-child(1) {
+    .table-searchoptions .tr .td:nth-child(1) {
         width: 8em;
     }
 
-    .table-searchoptions tr td:nth-child(2) {
+    .table-searchoptions .tr .td:nth-child(2) {
         width: 10em;
     }
 
-    .table-searchoptions tr td:nth-child(3) {
+    .table-searchoptions .tr .td:nth-child(3) {
         width: 2em;
     }
     /*書目搜尋 表格樣式*/
@@ -1744,12 +1802,117 @@
     .div-table>.div-footer>.tr>.td:last-child {
         /*border-radius: 0 0 4px 0;*/
     }
-    .table-striped>tbody>tr:nth-of-type(odd){
-            background-color: #F5F6F7;
-        }
+
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: #F5F6F7;
+    }
 
 
+/*RWD DIV表格*/
+/*RWD DIVtable*/
+.rwd-divtable {
+    min-width: 100%;
+    background: #fff;
+    overflow: hidden;
+    color: #4a4a4a;
+}
+/*th字體加粗*/
+.rwd-divtable .tr:first-child>.th {
+    font-weight: bold;
+}
+/*表格偶數行，只要是tr(不管內部包含th/td)的偶數都會加底色*/
+.rwd-divtable .tr:nth-of-type(even) {
+    background: #F5F6F7;
+}
 
+
+.rwd-divtable {
+    display: table;
+}
+
+.rwd-divtable .thead {
+    display: table-header-group;
+}
+
+.rwd-divtable .tbody {
+    display: table-row-group;
+}
+
+.rwd-divtable .tfooter {
+    display: table-footer-group;
+}
+
+.rwd-divtable .tr {
+    display: table-row;
+}
+
+.rwd-divtable .th,
+.rwd-divtable .td {
+    display: table-cell;
+    text-align: left;
+    padding: 15px 5px;
+}
+/*表格標題，只能在table標籤下有一個，建議用title取代*/
+.rwd-divtable .caption{
+    display: table-caption;
+    text-align: center;
+}
+.rwd-divtable .col{
+    display: table-column;
+}
+/*選取幾欄*/
+.rwd-divtable .colgroup{
+    display: table-column-group;
+}
+/*會先吃到這個設定讓表頭消失，但尺寸992px以下會再吃到display:block屬性*/
+.rwd-divtable .th {
+    display: none;
+}
+
+.rwd-divtable .td {
+    display: block;
+}
+
+.rwd-divtable .td:before {
+    content: attr(data-th) " : ";
+    font-weight: bold;
+    width: 7em;
+    display: inline-block;
+}
+.rwd-divtable .th,
+.rwd-divtable .td:before {
+    color: #4A4A4A;
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    .rwd-divtable .td:before {
+        display: none;
+    }
+    .rwd-divtable .th,
+    .rwd-divtable .td {
+        display: table-cell;
+        padding: 15px 5px;
+    }
+    .rwd-divtable .th:first-child,
+    .rwd-divtable .td:first-child {
+        padding-left: 10px;
+    }
+    .rwd-divtable .th:last-child,
+    .rwd-divtable .td:last-child {
+        padding-right: 10px;
+    }
+    .rwd-divtable .th,
+    .rwd-divtable .td {
+        padding: 15px 5px;
+        !important;
+    }
+    .rwd-divtable .th,
+    .rwd-divtable .td:before {
+        color: #4a4a4a;
+        font-weight: normal;
+    }
+}
 
 
 
