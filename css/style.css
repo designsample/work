@@ -1932,7 +1932,7 @@
 }
 .table-form .div-table .td{
     padding: 10px 5px;
-    min-height: 1em;
+    vertical-align: middle;
 }
 .table-form .div-table .tr{
     
