@@ -1,4 +1,5 @@
     @charset "UTF-8";
+
     * {
         font-family: "WenQuanYi Zen Hei", "文泉驛正黑", "Heiti TC", "黑體-繁", "LiHei Pro", "儷黑 Pro", "PingFang TC", "Droid Sans", "Roboto", "Microsoft JhengHei", "微軟正黑體";
         word-break: break-word;
@@ -51,7 +52,7 @@
         z-index: 4;
         box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.30);
         background: url(../img/bg-mainMenu.png), url(../img/bg-subMenu.png) no-repeat;
-        background-position: bottom, calc( (100% - 1150px)/2 + 1292px) 8px;
+        background-position: bottom, calc((100% - 1150px)/2 + 1292px) 8px;
         background-repeat: repeat-x, no-repeat;
         border: 0;
     }
@@ -135,6 +136,7 @@
 
         left: 0;
     }
+
     /*index-search首頁搜尋*/
 
     .index-search {
@@ -215,6 +217,7 @@
         background-color: none;
         border-color: none;
     }
+
     /*快捷按鈕*/
 
     .quick-online div {
@@ -304,6 +307,7 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+
     /*News*/
 
     .list-table {
@@ -352,6 +356,7 @@
     .index-news .row {
         margin-bottom: 30px;
     }
+
     /*OWL*/
 
     .chosen-book {
@@ -418,6 +423,7 @@
         font-weight: bold;
         color: #000;
     }
+
     /*Footer*/
 
     .logo-link {
@@ -442,6 +448,7 @@
         padding-top: 12px;
         vertical-align: middle;
     }
+
     /* Track */
     /*::-webkit-scrollbar-track {
     background: transparent; 
@@ -469,15 +476,16 @@
     }
 
 
-     ::-webkit-scrollbar-thumb {
+    ::-webkit-scrollbar-thumb {
         background: rgba(255, 132, 0, 0.6);
         border-radius: 0;
     }
 
-     ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         width: 10px;
         background: transparent;
     }
+
     /*首頁樣式結束*/
 
     .panel-ISBN {
@@ -508,6 +516,7 @@
         display: inline-block;
         margin-bottom: 12px;
     }
+
     /* .list-ISBN li > a ~ p ,.list-ISBN li > a{
         display: inline-block;
         margin-bottom: 12px;
@@ -631,6 +640,7 @@
         display: block;
         margin: 0 auto;
     }
+
     /*依筆畫*/
 
     .btngroup-stroke .btn-group {
@@ -640,11 +650,13 @@
     .btngroup-stroke .btn-group .btn {
         border-color: transparent;
     }
+
     /*所有簡介類型content-intro*/
 
     .content-intro {
         padding: 15px 30px;
     }
+
     /*首頁以外樣式結束*/
     /*【+】【-】展開b款*/
     /*原本高寬=1em*/
@@ -683,6 +695,7 @@
         display: none;
         margin: 0;
     }
+
     /*這個很重要要一起包進去B款*/
 
     .classGroup>li,
@@ -690,6 +703,7 @@
         padding-left: 0;
         list-style: none;
     }
+
     /**/
 
     .menu-left-sub {
@@ -720,6 +734,7 @@
         width: 100%;
         border-radius: 5px;
     }
+
     /*無 按鈕--------------------*/
     /*一般狀態*/
 
@@ -737,6 +752,7 @@
         line-height: 1.42857143;
         color: #333;
     }
+
     /*注目狀態*/
 
     .btn-none:hover {
@@ -745,6 +761,7 @@
         border-color: none;
         outline: 0;
     }
+
     /*啟用狀態，深深藍色*/
 
     .btn-none:focus,
@@ -757,6 +774,7 @@
         border-color: none;
         outline: 0;
     }
+
     /*啟用狀態，深深藍色*/
 
     .btn-none:active:hover,
@@ -778,6 +796,7 @@
     .open>.dropdown-toggle.btn-none {
         background-image: none;
     }
+
     /*禁用狀態，無彩色*/
 
     .btn-none.disabled:hover,
@@ -793,6 +812,7 @@
         border-color: none;
         border-radius: 0;
     }
+
     /*一般 按鈕--------------------*/
     /*一般狀態*/
 
@@ -827,6 +847,7 @@
         color: #555;
         cursor: not-allowed;
     }
+
     /*未連結link 已連結vivited*/
     /*hover*/
 
@@ -842,6 +863,7 @@
         color: #555;
         cursor: not-allowed;
     }
+
     /*active*/
 
     .btn-blue:active {}
@@ -908,7 +930,7 @@
     }
 
     .btn-red {
-        color: #FF4D4D!important;
+        color: #FF4D4D !important;
         background-image: none;
         background: #fff;
         border: 1px solid #FF4D4D;
@@ -963,6 +985,7 @@
         -moz-box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.6);
         box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.6);
     }
+
     /*斷點們*/
     /*當螢幕小於767px時*/
 
@@ -970,9 +993,11 @@
         body {
             padding-top: 54px;
         }
+
         .navbar {
             height: 50px;
         }
+
         .navbar {
             position: fixed;
             width: 100%;
@@ -984,23 +1009,28 @@
             background-repeat: none;
             border: 0;
         }
+
         .navbar-collapse {
             top: -2px;
             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.30);
         }
+
         .navbar-nav {
             margin: 0px -5px;
         }
+
         .navbar-brand {
             padding-top: 0;
             margin-top: 0;
         }
+
         .navbar-brand>img {
             height: 41px;
             padding-top: 10px;
             padding-left: 10px;
             width: auto;
         }
+
         .navbar-default .navbar-language {
             position: relative;
             float: right;
@@ -1016,15 +1046,18 @@
             border: 1px solid #4BA6FF;
             border-radius: 5px;
         }
+
         .wrapper-menu {
             top: 0;
         }
+
         .main-menu {
             left: 0;
             top: 0;
             bottom: 0;
             position: relative;
         }
+
         .main-menu::after {
             background: none;
             position: none;
@@ -1034,21 +1067,26 @@
             margin-left: 0;
             z-index: -2;
         }
+
         .sub-menu {
             right: 0;
             top: 0;
             position: relative;
         }
+
         .sub-menu>li>a:first-child {
             text-align: center;
             background-color: #ffffff;
         }
+
         .sub-menu>li>a:first-child:hover {
             background-color: #f9f9f9;
         }
+
         .navbar-collapse.in {
             background-color: #EFF1F3;
         }
+
         .index-search {
 
             background: url(../img/bg-shadow.png), url(../img/bg-pattern-01.png);
@@ -1056,9 +1094,11 @@
             background-position: left bottom, left;
             height: 320px;
         }
+
         .index-search .search-block {
             margin-top: 30px;
         }
+
         .nav-tabs>li.active>a,
         .nav-tabs>li.active>a:hover,
         .nav-tabs>li.active>a:focus {
@@ -1071,170 +1111,215 @@
             background-color: none;
             text-shadow: 1px 1px 20px #fff;
         }
+
         #demos .owl-carousel .item>img {
             margin-bottom: 20px;
         }
+
         .index-allnews {
             background: #FFCF4D;
             margin-bottom: 30px;
         }
+
         .index-booknews {
             margin-bottom: 30px;
         }
+
         .index-news {
             background: none;
         }
+
         .footer-address>div {
             height: auto;
         }
+
         .footer .float-right {
             float: none;
         }
+
         .owl-nav {
             display: none;
         }
+
         .footer {
             margin-top: 60px;
             background: #f2f2f2;
         }
+
         .footer .center {
             text-align: left;
             color: #888;
             padding: 0;
         }
+
         #goTop {
             bottom: 20px;
             right: 20px;
         }
     }
+
     /*當螢幕大於768px時*/
 
     @media screen and (min-width:768px) {
         .navbar-default .navbar-language {
             display: none;
         }
+
         .navbar {
-            background-position: bottom, calc( (100% - 950px)/2 + 984px) 8px;
+            background-position: bottom, calc((100% - 950px)/2 + 984px) 8px;
         }
+
         .search-block {
             padding-top: 30px;
         }
+
         .index-news {
             background: none;
             padding-bottom: 40px;
         }
+
         .index-allnews {
             background: #FFCF4D;
             margin-bottom: 30px;
         }
+
         .footer-address>div:nth-child(2) {
             /*background: #0081FF;*/
         }
+
         .footer-address>div:last-child {
             /*background: #F2F2F2;*/
         }
+
         .logo-link {
             height: auto;
         }
+
         .footer-address>div {
             height: auto;
         }
+
         .footer .float-right {
             float: none;
         }
+
         .footer-address .color-white {}
+
         .footer {
             margin-top: 40px;
 
             background: url(../img/bg-footer4.png);
-            background-position: calc( (100% - 990px)/2 - 25px) 0px;
+            background-position: calc((100% - 990px)/2 - 25px) 0px;
             background-repeat: no-repeat;
         }
+
         .footer .center {
             text-align: left;
             color: #888;
             padding: 0;
         }
+
+        .form-horizontal p.control-label {
+            text-align: left;
+            margin-bottom: 0;
+            padding-top: 7px;
+        }
     }
+
     /*當螢幕大於992px時*/
 
     @media screen and (min-width:992px) {
         .navbar {
-            background-position: bottom, calc( (100% - 950px)/2 + 1111px) 8px;
+            background-position: bottom, calc((100% - 950px)/2 + 1111px) 8px;
         }
+
         .footer {
             margin-top: 40px;
             background: url(../img/bg-footer4.png);
-            background-position: calc( (100% - 1150px)/2 - 157px) 0px;
+            background-position: calc((100% - 1150px)/2 - 157px) 0px;
             background-repeat: no-repeat;
         }
     }
+
     /*當螢幕大於1200px時*/
 
     @media screen and (min-width:1200px) {
         .search-books {
-            min-height: calc( 100vh - 368px);
+            min-height: calc(100vh - 368px);
         }
+
         .navbar {
             height: 134px;
             margin-bottom: 0;
             z-index: 4;
             box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.30);
             background: url(../img/bg-mainMenu.png), url(../img/bg-subMenu.png) no-repeat;
-            background-position: bottom, calc( (100% - 1150px)/2 + 1292px) 8px;
+            background-position: bottom, calc((100% - 1150px)/2 + 1292px) 8px;
             background-repeat: repeat-x, no-repeat;
             border: 0;
         }
+
         .navbar-default .navbar-nav>.active>a {
             font-size: 16px;
         }
+
         .navbar-nav>li>a {
             padding: 16.5px 20px;
             font-size: 16px;
         }
+
         .index-news {
             background: url(../img/bg-news.png), url(../img/bg-news2.png);
-            background-position: calc( (100% - 1150px)/2 + 340px) 0px, 0 0;
+            background-position: calc((100% - 1150px)/2 + 340px) 0px, 0 0;
             background-repeat: no-repeat, no-repeat;
             padding-bottom: 40px;
         }
+
         .index-allnews {
             background: none;
             margin-bottom: 30px;
         }
+
         .footer {
             margin-top: 60px;
             background: url(../img/bg-footer4.png),
-            url(../img/bg-footer2.png),
-            url(../img/bg-footer3.png);
-            background-position: calc( (100% - 1150px)/2 - 157px) 0px, 96px, bottom;
+                url(../img/bg-footer2.png),
+                url(../img/bg-footer3.png);
+            background-position: calc((100% - 1150px)/2 - 157px) 0px, 96px, bottom;
             background-repeat: no-repeat, repeat-x, repeat-x;
         }
+
         .logo-link {
             background: url(../img/bg-footer1.png) top left no-repeat;
             height: 144px;
             vertical-align: middle;
             padding: 43px 25px;
         }
+
         .footer-address>div {
             height: 48px;
             padding-top: 12px;
             vertical-align: middle;
         }
+
         .footer .float-right {
             float: right;
         }
+
         .footer .center {
             text-align: center;
             color: #fff;
         }
+
         .footer .center:first-child {
             text-align: left;
         }
+
         .footer .center:last-child {
             text-align: right;
         }
     }
+
     /*theme*/
     /*color*/
 
@@ -1254,6 +1339,12 @@
 
     .color-gray {
         color: #888;
+    }
+    .color-red{
+        color: red;
+    }
+    sup.color-red{
+        font-size: 100%;
     }
 
     .color-default {
@@ -1327,6 +1418,7 @@
     .display-block {
         display: block;
     }
+
 
 
     .b-0 {
@@ -1420,6 +1512,10 @@
         width: 24%;
         display: inline-block;
     }
+    .width-25 {
+        width: 25%;
+        display: inline-block;
+    }
 
     .width-twenty {
         width: 19%;
@@ -1477,6 +1573,7 @@
     .clear {
         float: none;
     }
+
     /*div table*/
     /*預設寬100%*/
 
@@ -1500,6 +1597,7 @@
     .divtable .tr {
         display: table-row;
     }
+
     /*預設邊距*/
 
     .divtable .th,
@@ -1507,6 +1605,7 @@
         display: table-cell;
         padding: 15px 5px;
     }
+
     /*表格標題，只能在table標籤下有一個，建議用title取代*/
 
     .divtable .caption {
@@ -1517,11 +1616,13 @@
     .divtable .col {
         display: table-column;
     }
+
     /*選取幾欄*/
 
     .divtable .colgroup {
         display: table-column-group;
     }
+
     /*RWD table*/
 
     .rwd-table {
@@ -1572,6 +1673,7 @@
         color: #4A4A4A;
         font-weight: bold;
     }
+
     /*書目搜尋 搜尋表格樣式*/
 
     .table-searchoptions {}
@@ -1611,6 +1713,7 @@
     .table-searchoptions .tr .td:nth-child(3) {
         width: 2em;
     }
+
     /*書目搜尋 表格樣式*/
 
     .table-searchbooks th:nth-child(1),
@@ -1687,48 +1790,59 @@
         .rwd-table td:before {
             display: none;
         }
+
         .rwd-table th,
         .rwd-table td {
             display: table-cell;
             padding: 15px 5px;
         }
+
         .rwd-table th:first-child,
         .rwd-table td:first-child {
             padding-left: 10px;
         }
+
         .rwd-table th:last-child,
         .rwd-table td:last-child {
             padding-right: 10px;
         }
+
         .rwd-table th,
         .rwd-table td {
             padding: 15px 5px;
-            !important;
+             !important;
         }
+
         .table-searchbooks th:nth-child(1),
         .table-searchbooks tr td:nth-child(1) {
             width: 5em;
             text-align: center;
         }
+
         .rwd-table th,
         .rwd-table td:before {
             color: #4a4a4a;
             font-weight: normal;
         }
+
         .table-bookinfo tr:first-child {
             background: #E6EAED;
         }
+
         .table-bookinforight td {
             border-top: 0 !important;
         }
+
         .table-bookinforight td:first-child {
             width: 6em;
         }
+
         .table-bookinforight tr:nth-child(odd) {
             border-top: 0;
             background: #F5F6F7;
         }
     }
+
     /*div table*/
 
     .div-table {
@@ -1737,6 +1851,7 @@
         border-color: transparent;
         border: 0;
         margin-bottom: 1em;
+        border-collapse: collapse;
     }
 
     .div-table>.div-heading {
@@ -1758,8 +1873,11 @@
         background: transparent;
     }
 
-    .div-table>div>.tr {
+    .div-table div.tr {
         display: table-row;
+    }
+    .div-table div.td {
+        display: inline-block;
     }
 
     .div-table>div:last-child>.tr:last-child>.td {
@@ -1807,112 +1925,153 @@
         background-color: #F5F6F7;
     }
 
+    /*自訂表格樣式 表單們*/
 
-/*RWD DIV表格*/
-/*RWD DIVtable*/
-.rwd-divtable {
-    min-width: 100%;
-    background: #fff;
-    overflow: hidden;
-    color: #4a4a4a;
+.table-form .div-table p{
+    margin: 0;
 }
-/*th字體加粗*/
-.rwd-divtable .tr:first-child>.th {
-    font-weight: bold;
+.table-form .div-table .td{
+    padding: 10px 5px;
+    min-height: 1em;
 }
-/*表格偶數行，只要是tr(不管內部包含th/td)的偶數都會加底色*/
-.rwd-divtable .tr:nth-of-type(even) {
-    background: #F5F6F7;
+.table-form .div-table .tr{
+    
+    border-bottom: 1px solid #ccc;
+    
 }
 
+@media screen and (max-width: 768px){
+    .table-form {
+        width: 100%;
+        overflow-x: scroll;
+        background-color: #f1f1f1;
+        box-shadow: 0 2px 3px #b9b9b9 inset;
 
-.rwd-divtable {
-    display: table;
-}
-
-.rwd-divtable .thead {
-    display: table-header-group;
-}
-
-.rwd-divtable .tbody {
-    display: table-row-group;
-}
-
-.rwd-divtable .tfooter {
-    display: table-footer-group;
-}
-
-.rwd-divtable .tr {
-    display: table-row;
-}
-
-.rwd-divtable .th,
-.rwd-divtable .td {
-    display: table-cell;
-    text-align: left;
-    padding: 15px 5px;
-}
-/*表格標題，只能在table標籤下有一個，建議用title取代*/
-.rwd-divtable .caption{
-    display: table-caption;
-    text-align: center;
-}
-.rwd-divtable .col{
-    display: table-column;
-}
-/*選取幾欄*/
-.rwd-divtable .colgroup{
-    display: table-column-group;
-}
-/*會先吃到這個設定讓表頭消失，但尺寸992px以下會再吃到display:block屬性*/
-.rwd-divtable .th {
-    display: none;
-}
-
-.rwd-divtable .td {
-    display: block;
-}
-
-.rwd-divtable .td:before {
-    content: attr(data-th) " : ";
-    font-weight: bold;
-    width: 7em;
-    display: inline-block;
-}
-.rwd-divtable .th,
-.rwd-divtable .td:before {
-    color: #4A4A4A;
-    font-weight: bold;
-}
-
-@media (min-width: 992px) {
-    .rwd-divtable .td:before {
-        display: none;
     }
+    .table-form .div-table{
+        width: 800px;
+        overflow-x: scroll;
+    }
+}
+
+
+    /*RWD DIV表格*/
+    /*RWD DIVtable*/
+    .rwd-divtable {
+        min-width: 100%;
+        background: #fff;
+        overflow: hidden;
+        color: #4a4a4a;
+    }
+
+    /*th字體加粗*/
+    .rwd-divtable .tr:first-child>.th {
+        font-weight: bold;
+    }
+
+    /*表格偶數行，只要是tr(不管內部包含th/td)的偶數都會加底色*/
+    .rwd-divtable .tr:nth-of-type(even) {
+        background: #F5F6F7;
+    }
+
+
+    .rwd-divtable {
+        display: table;
+    }
+
+    .rwd-divtable .thead {
+        display: table-header-group;
+    }
+
+    .rwd-divtable .tbody {
+        display: table-row-group;
+    }
+
+    .rwd-divtable .tfooter {
+        display: table-footer-group;
+    }
+
+    .rwd-divtable .tr {
+        display: table-row;
+    }
+
     .rwd-divtable .th,
     .rwd-divtable .td {
         display: table-cell;
+        text-align: left;
         padding: 15px 5px;
     }
-    .rwd-divtable .th:first-child,
-    .rwd-divtable .td:first-child {
-        padding-left: 10px;
+
+    /*表格標題，只能在table標籤下有一個，建議用title取代*/
+    .rwd-divtable .caption {
+        display: table-caption;
+        text-align: center;
     }
-    .rwd-divtable .th:last-child,
-    .rwd-divtable .td:last-child {
-        padding-right: 10px;
+
+    .rwd-divtable .col {
+        display: table-column;
     }
-    .rwd-divtable .th,
+
+    /*選取幾欄*/
+    .rwd-divtable .colgroup {
+        display: table-column-group;
+    }
+
+    /*會先吃到這個設定讓表頭消失，但尺寸992px以下會再吃到display:block屬性*/
+    .rwd-divtable .th {
+        display: none;
+    }
+
     .rwd-divtable .td {
-        padding: 15px 5px;
-        !important;
+        display: block;
     }
+
+    .rwd-divtable .td:before {
+        content: attr(data-th) " : ";
+        font-weight: bold;
+        width: 7em;
+        display: inline-block;
+    }
+
     .rwd-divtable .th,
     .rwd-divtable .td:before {
-        color: #4a4a4a;
-        font-weight: normal;
+        color: #4A4A4A;
+        font-weight: bold;
     }
-}
+
+    @media (min-width: 992px) {
+        .rwd-divtable .td:before {
+            display: none;
+        }
+
+        .rwd-divtable .th,
+        .rwd-divtable .td {
+            display: table-cell;
+            padding: 15px 5px;
+        }
+
+        .rwd-divtable .th:first-child,
+        .rwd-divtable .td:first-child {
+            padding-left: 10px;
+        }
+
+        .rwd-divtable .th:last-child,
+        .rwd-divtable .td:last-child {
+            padding-right: 10px;
+        }
+
+        .rwd-divtable .th,
+        .rwd-divtable .td {
+            padding: 15px 5px;
+             !important;
+        }
+
+        .rwd-divtable .th,
+        .rwd-divtable .td:before {
+            color: #4a4a4a;
+            font-weight: normal;
+        }
+    }
 
 
 
@@ -1922,21 +2081,25 @@
             -moz-box-shadow: none;
             box-shadow: none;
         }
+
         25% {
             -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
             -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
             box-shadow: 0px 1px 13px 2px #f0ad4e;
         }
+
         50% {
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
             box-shadow: none;
         }
+
         75% {
             -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
             -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
             box-shadow: 0px 1px 13px 2px #f0ad4e;
         }
+
         100% {
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
@@ -1950,21 +2113,25 @@
             -moz-box-shadow: none;
             box-shadow: none;
         }
+
         25% {
             -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
             -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
             box-shadow: 0px 1px 13px 2px #f0ad4e;
         }
+
         50% {
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
             box-shadow: none;
         }
+
         75% {
             -webkit-box-shadow: 0px 1px 13px 2px #f0ad4e;
             -moz-box-shadow: 0px 1px 13px 2px #f0ad4e;
             box-shadow: 0px 1px 13px 2px #f0ad4e;
         }
+
         100% {
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
@@ -1976,6 +2143,7 @@
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
