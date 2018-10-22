@@ -1714,6 +1714,7 @@
         width: 2em;
     }
 
+
     /*書目搜尋 表格樣式*/
 
     .table-searchbooks th:nth-child(1),
@@ -1850,7 +1851,6 @@
         width: 100%;
         border-color: transparent;
         border: 0;
-        margin-bottom: 1em;
         border-collapse: collapse;
     }
 
@@ -1877,6 +1877,7 @@
         display: table-row;
     }
     .div-table div.td {
+    	display: -webkit-inline-box;
         display: inline-block;
     }
 
@@ -1885,7 +1886,7 @@
     }
 
     .div-table .td {
-        display: table-cell;
+        /*display: table-cell;*/
         padding: 15px;
         /*border: 1px solid #ddd;*/
         border-top: none;
