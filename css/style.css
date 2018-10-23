@@ -841,7 +841,16 @@
 
     .btn-gray {}
 
-    .btn-disable {}
+    .btn-disable {
+        background: #eee;
+        color: #999;
+        cursor: not-allowed !important;
+    }
+
+    .btn-disable:active {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
 
     .a-disable {
         color: #555;
@@ -1340,10 +1349,12 @@
     .color-gray {
         color: #888;
     }
-    .color-red{
+
+    .color-red {
         color: red;
     }
-    sup.color-red{
+
+    sup.color-red {
         font-size: 100%;
     }
 
@@ -1433,6 +1444,9 @@
     .ph-6 {
         padding: 6px 0;
     }
+    .ph-20 {
+        padding: 20px 0;
+    }
 
     .p-0 {
         padding: 0 !important;
@@ -1446,6 +1460,10 @@
         margin: 10px auto;
     }
 
+    .mh-20 {
+        margin: 20px 0;
+    }
+
     .mh-30 {
         margin: 30px 0;
     }
@@ -1453,6 +1471,7 @@
     .mr-10 {
         margin-right: 10px;
     }
+
     .mt-10 {
         margin-top: 10px;
     }
@@ -1463,6 +1482,10 @@
 
     .mb-10 {
         margin-bottom: 10px;
+    }
+
+    .mb-20 {
+        margin-bottom: 20px;
     }
 
     .mb-30 {
@@ -1515,6 +1538,7 @@
         width: 24%;
         display: inline-block;
     }
+
     .width-25 {
         width: 25%;
         display: inline-block;
@@ -1879,8 +1903,9 @@
     .div-table div.tr {
         display: table-row;
     }
+
     .div-table div.td {
-    	display: -webkit-inline-box;
+        display: -webkit-inline-box;
         display: inline-block;
     }
 
@@ -1930,34 +1955,40 @@
     }
 
     /*自訂表格樣式 表單們*/
-
-.table-form  p{
-    margin: 0;
-}
-.table-form td{
-    padding: 10px 5px;
-    vertical-align: middle;
-    background: #ffa84a20;
-}
-.table-form tr{
-    
-    border-bottom: 1px solid #ccc;
-    
-}
-
-@media screen and (max-width: 768px){
-    .table-form {
+    .table-form table {
         width: 100%;
-        overflow-x: scroll;
-        background-color: #f1f1f1;
-        box-shadow: 0 2px 3px #b9b9b9 inset;
+    }
+
+    .table-form p {
+        margin: 0;
+    }
+
+    .table-form td {
+        padding: 10px 5px;
+        vertical-align: middle;
+        background: #fff4e9;
+    }
+
+    .table-form tr {
+
+        border-bottom: 1px solid #ccc;
 
     }
-    .table-form table{
-        width: 800px;
-        overflow-x: scroll;
+
+    @media screen and (max-width: 768px) {
+        .table-form {
+            width: 100%;
+            overflow-x: scroll;
+            background-color: #f1f1f1;
+            box-shadow: 0 2px 3px #b9b9b9 inset;
+
+        }
+
+        .table-form table {
+            width: 800px;
+            overflow-x: scroll;
+        }
     }
-}
 
 
     /*RWD DIV表格*/
@@ -2154,35 +2185,38 @@
         }
     }
 
-.reveal-if-active {
-  opacity: 0;
-  /*max-height: 0;*/
-  height: 0;
-  overflow: hidden;
-  font-size: 16px;
- /* -webkit-transform: scale(0.8);
+    .reveal-if-active {
+        opacity: 0;
+        /*max-height: 0;*/
+        height: 0;
+        overflow: hidden;
+        font-size: 16px;
+        /* -webkit-transform: scale(0.8);
           transform: scale(0.8);
   transition: 0.5s;*/
-}
-.reveal-if-active label {
-  /*display: block;*/
-  /*margin: 0 0 3px 0;*/
-}
-.reveal-if-active input[type=text] {
-/*  width: 100%;*/
-}
-input[type="radio"]:checked ~ .reveal-if-active, input[type="checkbox"]:checked ~ .reveal-if-active {
-  
-  /*opacity: 1;
+    }
+
+    .reveal-if-active label {
+        /*display: block;*/
+        /*margin: 0 0 3px 0;*/
+    }
+
+    .reveal-if-active input[type=text] {
+        /*  width: 100%;*/
+    }
+
+    input[type="radio"]:checked~.reveal-if-active,
+    input[type="checkbox"]:checked~.reveal-if-active {
+
+        /*opacity: 1;
   max-height: 100px;
   padding: 10px 20px;
   -webkit-transform: scale(1);
           transform: scale(1);
           overflow: visible;*/
-  opacity: 1;
-    padding: 0 15px 10px 15px;
-    overflow: auto;
-    display: block;
-    height: auto;
-}
-
+        opacity: 1;
+        padding: 0 15px 10px 15px;
+        overflow: auto;
+        display: block;
+        height: auto;
+    }
