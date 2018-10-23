@@ -100,7 +100,7 @@
                         <h2>ISBN/CIP線上申請</h2>
                     </div>
                     <div class="content-intro">
-                        <h4 class="text-right-ISBN">申請ＩＳＢＮ／編輯申請資料(1/3)</h4>
+                        <h4 class="text-right-ISBN">申請ＩＳＢＮ／編輯申請資料(3/3)</h4>
                         <div class="col-xs-12 p-0">
                             <a role="button" class="btn btn-disable col-xs-4">步驟1.填寫申請資料</a>
                             <a role="button" class="btn btn-warning col-xs-4">步驟2.編輯申請資料</a>
@@ -109,114 +109,47 @@
                         <div class="table-form">
                             <table>
                                 <tr>
-                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><label for="FO_Title">書名及副書名：</label></td>
-                                    <td style="width: 80%"><input type="text" name="FO_Title" id="FO_Title" value="測試用" size="50"><br>
-                                        <p>（書名頁或版權頁上）</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><label for="FO_Author">著者及合著者：</label></td>
-                                    <td style="width: 80%"><input type=text name="FO_Author" id="FO_Author" value="測試用" size="50"><br>
-                                        <p>（書名頁或版權頁上，請依序填寫）</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 20%" class="text-right"><label for="FO_Version">版次：</label></td>
+                                    <td style="width: 20%" class="text-right"><label for="F0">書名頁：</label></td>
                                     <td style="width: 80%">
-                                        <input type="text" name="FO_Version" id="FO_Version" value="" size="20">
-                                        <br>
-                                        <p>（指內容經增補修改之不同版本。若重印本則加註刷次）</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 20%" class="text-right"><label for="FO_PubYear">預訂出版時間：</label></td>
-                                    <td style="width: 80%">
-                                        民國<select name="FO_PubYear" id="FO_PubYear" size=1>
-                                            <option value="107">107</option>
-                                            <option value="108">108</option>
-                                            <option value="109">109</option>
-                                            <option value="110">110</option>
-                                            <option value="111">111</option>
-                                        </select>
-                                        年
-                                        <select name="FO_PubMonth" id="FO_PubMonth" size="1">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                        </select>&nbsp;月 (請依照版權頁填寫)
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><label for="FO_SpecWidth">規格(長x寬)：</label></td>
-                                    <td style="width: 80%">
-                                        <input type="text" name="FO_SpecWidth" id="FO_SpecWidth" value="" size="8">公分&ensp;&#10005;&ensp;<input type="text" name="FO_SpecHeight" id="FO_SpecHeight" value="" size="8">公分
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup>本書申請：</td>
-                                    <td style="width: 80%">
-                                        <div>
-                                            <input type="radio" name="FO_AppType" id="FO_T1_Pages" required>
-                                            <label for="FO_T1_Pages">單行本號碼</label>
-                                            <div class="reveal-if-active col-xs-12">
-                                                <label for="FO_T1_0_Pages">單行本號碼，頁數：<input type="text" name="" size="10">頁</label>
-                                                <p class="color-red">給工程師：條件一：若先前已申請過套號ISBN，請填寫</p>
-                                                <label for="FO_T1_1_Pages" class="inline-block">套號ISBN：<input type="text" id="FO_T1_1_Pages" name="FO_T1_1_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">，</label>
-                                                <label for="FO_T1_2_Pages" class="inline-block">套書名稱：<input type="text" id="FO_T1_2_Pages" name="FO_T1_2_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">，</label>
-                                                <label for="FO_T1_3_Pages" class="inline-block">出版<input type="text" id="FO_T1_3_Pages" name="FO_T1_3_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊，</label>
-                                                <label for="FO_T1_4_Pages" class="inline-block">此書為該套書的第<input type="text" id="FO_T1_4_Pages" name="FO_T1_4_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊，</label>
-                                                <p class="color-red">給工程師：條件二：若先前已申請過該套書中其他冊的ISBN，請填寫各冊之資料：</p>
-                                                <label for="FO_T1_5_Pages" class="inline-block">第<input type="text" id="FO_T1_5_Pages" name="FO_T1_5_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊，</label>
-                                                <label for="FO_T1_6_Pages" class="inline-block">ISBN：<input type="text" id="FO_T1_6_Pages" name="FO_T1_6_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10"></label>
-                                                <a role="button" href="" class="btn btn-blue"><span class="glyphicon glyphicon-plus"></span></a>
-                                                <!-- 
-                                                    <input type="text" id="FO_T1_1_Pages" name="FO_T1_1_Pages" class="require-if-active" data-require-pair="#FO_T1_Pages"> -->
-                                            </div>
+                                        <input type="text" name="F0" id="F0" value="" size="30">
+                                        <div class="pull-right inline-block">
+                                            <a class="btn btn-blue" role="button">下載檔案</a>
+                                            <a class="btn btn-blue" href="#F0_delete" aria-controls="F0_delete" role="tab" data-toggle="tab">刪除檔案</a>
+                                            <a class="btn btn-blue" href="#F0_choose" aria-controls="F0_choose" role="tab" data-toggle="tab">選擇檔案</a>
                                         </div>
-                                        <div>
-                                            <input type="radio" name="FO_AppType" id="FO_T2_Volumes">
-                                            <label for="FO_T2_Volumes">只申請套號</label>
-                                            <div class="reveal-if-active">
-                                                <label for="FO_T2_0_Volumes">只申請套號，冊數：<input type="text" name="" size="10">冊</label>
-                                                <p class="color-red">給工程師：條件一：若先前已申請過本套書之各冊ISBN，請填寫各冊之資料：</p>
-                                                <label for="FO_T2_1_Volumes" class="inline-block">第<input type="text" id="FO_T2_1_Volumes" name="FO_T2_1_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊，</label>
-                                                <label for="FO_T2_2_Volumes" class="inline-block">ISBN：<input type="text" id="FO_T2_2_Volumes" name="FO_T2_2_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">，</label>
-                                                <label for="FO_T2_3_Volumes" class="inline-block">書名：<input type="text" id="FO_T2_3_Volumes" name="FO_T2_3_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10"></label>
-                                                <a role="button" href="" class="btn btn-blue"><span class="glyphicon glyphicon-plus"></span></a>
-                                            </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><label for="F1">版權頁：</label></td>
+                                    <td style="width: 80%">
+                                        <input type="text" name="F1" id="F1" value="" size="30">
+                                        <div class="pull-right inline-block">
+                                            <a class="btn btn-blue" role="button">下載檔案</a>
+                                            <a class="btn btn-blue" href="#F1_delete" aria-controls="F1_delete" role="tab" data-toggle="tab">刪除檔案</a>
+                                            <a class="btn btn-blue" href="#F1_choose" aria-controls="F1_choose" role="tab" data-toggle="tab">選擇檔案</a>
                                         </div>
-                                        <div>
-                                            <input type="radio" name="FO_AppType" id="FO_T3_Volumes">
-                                            <label for="FO_T3_Volumes">申請套號及單行本號碼</label>
-                                            <div class="reveal-if-active">
-                                                <label for="FO_T3_0_Volumes">申請套號及單行本號碼，套書名稱：<input type="text" name="" size="10">，</label>
-                                                <label for="FO_T3_1_Volumes" class="inline-block">出版<input type="text" id="FO_T3_1_Volumes" name="FO_T3_1_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊，</label>
-                                                <label for="FO_T3_2_Volumes" class="inline-block">此為第<input type="text" id="FO_T3_2_Volumes" name="FO_T3_2_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10"></label>
-                                                <label for="FO_T3_3_Volumes" class="inline-block">至<input type="text" id="FO_T3_3_Volumes" name="FO_T3_3_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊。</label>
-                                                <label for="FO_T3_4_Volumes" class="">一套價格：NT$<input type="text" id="FO_T3_4_Volumes" name="FO_T3_4_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">（各冊價格、頁數請在第二頁中填寫）</label>
-                                                <p class="color-red">給工程師：條件一：若先前已申請過本套書中其他冊的ISBN，請填寫各冊之資料：</p>
-                                                <label for="FO_T3_5_Volumes" class="inline-block">第<input type="text" id="FO_T3_5_Volumes" name="FO_T3_5_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">冊，</label>
-                                                <label for="FO_T3_6_Volumes" class="inline-block">ISBN：<input type="text" id="FO_T3_6_Volumes" name="FO_T3_6_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10">，</label>
-                                                <label for="FO_T3_7_Volumes" class="inline-block">書名：<input type="text" id="FO_T3_7_Volumes" name="FO_T3_7_Volumes" class="require-if-active" data-require-pair="#FO_T1_Pages" size="10"></label>
-                                                <a role="button" href="" class="btn btn-blue"><span class="glyphicon glyphicon-plus"></span></a>
-                                            </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><label for="F2">目次：</label></td>
+                                    <td style="width: 80%">
+                                        <input type="text" name="F2" id="F2" value="" size="30">
+                                        <div class="pull-right inline-block">
+                                            <a class="btn btn-blue" role="button">下載檔案</a>
+                                            <a class="btn btn-blue" href="#F2_delete" aria-controls="F2_delete" role="tab" data-toggle="tab">刪除檔案</a>
+                                            <a class="btn btn-blue" href="#F2_choose" aria-controls="F2_choose" role="tab" data-toggle="tab">選擇檔案</a>
                                         </div>
-                                        <!-- <div>
-                                            <input type="checkbox" name="choice-dollar" id="choice-dollar">
-                                            <label for="choice-dollar">Sure.</label>
-                                            <div class="reveal-if-active">
-                                                Wouldn't we all.
-                                            </div>
-                                        </div> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><label for="F3">序或部分內文：</label></td>
+                                    <td style="width: 80%">
+                                        <input type="text" name="F3" id="F3" value="" size="30">
+                                        <div class="pull-right inline-block">
+                                            <a class="btn btn-blue" role="button">下載檔案</a>
+                                            <a class="btn btn-blue" href="#F3_delete" aria-controls="F3_delete" role="tab" data-toggle="tab">刪除檔案</a>
+                                            <a class="btn btn-blue" href="#F3_choose" aria-controls="F3_choose" role="tab" data-toggle="tab">選擇檔案</a>
+                                        </div>
                                     </td>
                                 </tr>
                                 <script type="text/javascript">
@@ -249,21 +182,86 @@
                                 FormStuff.init();
                                 </script>
                             </table>
-                            
+                            <div class="tab-content">
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F0_delete">
+                                    <h5>刪除檔案</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-9 col-xl-10 ph-20 color-red">你確定要刪除【書名頁】中的這個【blank.pdf】檔案嗎？</p>
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">刪除檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F0_choose">
+                                    <h5>上傳檔案 / 請選擇要上傳到【書名頁】中的檔案 (檔案限制:10M)</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-3 col-xl-2 ph-20">上傳檔案：</p>
+                                        <input type="file" name="FO_userfile" class="col-xs-12 col-md-6 col-xl-8 ph-20">
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">上傳檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F1_delete">
+                                    <h5>刪除檔案</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-9 col-xl-10 ph-20 color-red">你確定要刪除【版權頁】中的這個【blank.pdf】檔案嗎？</p>
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">刪除檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F1_choose">
+                                    <h5>上傳檔案 / 請選擇要上傳到【版權頁】中的檔案 (檔案限制:10M)</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-3 col-xl-2 ph-20">上傳檔案：</p>
+                                        <input type="file" name="FO_userfile" class="col-xs-12 col-md-6 col-xl-8 ph-20">
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">上傳檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F2_delete">
+                                    <h5>刪除檔案</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-9 col-xl-10 ph-20 color-red">你確定要刪除【目次】中的這個【blank.pdf】檔案嗎？</p>
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">刪除檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F2_choose">
+                                    <h5>上傳檔案 / 請選擇要上傳到【目次】中的檔案 (檔案限制:10M)</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-3 col-xl-2 ph-20">上傳檔案：</p>
+                                        <input type="file" name="FO_userfile" class="col-xs-12 col-md-6 col-xl-8 ph-20">
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">上傳檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F3_delete">
+                                    <h5>刪除檔案</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-9 col-xl-10 ph-20 color-red">你確定要刪除【序或部分內文】中的這個【blank.pdf】檔案嗎？</p>
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">刪除檔案</a>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="col-xs-12 mt-10 p-0 tab-pane" id="F3_choose">
+                                    <h5>上傳檔案 / 請選擇要上傳到【序或部分內文】中的檔案 (檔案限制:10M)</h5>
+                                    <div class="col-xs-12 p-0 mh-20 bg-default">
+                                        <p class="col-xs-12 col-md-3 col-xl-2 ph-20">上傳檔案：</p>
+                                        <input type="file" name="FO_userfile" class="col-xs-12 col-md-6 col-xl-8 ph-20">
+                                        <a class="btn btn-info btn-sm col-xs-12 col-md-3 col-xl-2 mh-20" role="button">上傳檔案</a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group col-xs-12 mt-10 p-0 text-center">
                                 <div class="col-xs-12 col-md-6 text-left">
-                                    <input type="checkbox" name="autoSave" id="autoSave" class="inline-block" checked="checked"><p class="color-red inline-block">切換頁面時自動儲存所有資料</p>
+                                    <input type="checkbox" name="autoSave" id="autoSave" class="inline-block" checked="checked">
+                                    <p class="color-red inline-block">切換頁面時自動儲存所有資料</p>
                                 </div>
                                 <div class="col-xs-12 col-md-6 text-right">
-                                    <a href="" class="btn btn-blue" type="button">修改儲存</a>
-                                <a href="3.2-ISBNApplication-s3.html" class="btn btn-blue" type="button">填下一頁</a>
+                                    <a href="3.2-ISBNApplication-s3.html" class="btn btn-blue" type="button">填上一頁</a>
+                                    <a href="" class="btn btn-blue" type="button">資料確認</a>
                                 </div>
-                                
-                                
+                            </div>
+                            <div class="col-xs-12">
+                                <h5>檔案上傳須知</h5>
+                                <p>一、為加速作業流程，敬請上傳WORD檔、PDF檔或JPEG檔，恕不接受其他檔案格式。</p>
+                                <p>二、上傳JPEG檔時，請將圖檔寬度限定在 2048 Pixel 以下。</p>
+                                <p>三、上傳單一檔案大小請勿超過 10M。</p>
                             </div>
                         </div>
                         <!-- /input-group -->
-                        
                     </div>
                     <!-- / content-intro內文/內容包在這 -->
                 </div>

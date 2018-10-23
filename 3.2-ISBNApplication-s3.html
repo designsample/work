@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/ic_fav.png" />
+    <link rel="bookmark" href="img/ic_fav.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ISBN</title>
+    <meta name="keywords" content="全國新書資訊網,ISBN,申請ISBN,線上申請,書目下載,書目資料庫,電子書,國際標準書號,國際標準錄音錄影資料代碼,ISRC" />
+    <meta name="description" content="ISBN線上申請、書目資料庫下載與查詢" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min 2.js"></script> -->
+    <!--js順序有差要注意-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/miller_code.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">選單切換</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-text">選單</span>
+                </button>
+                <button type="button" class="navbar-toggle navbar-language">En</button>
+                <h1 class="logo"><a title="回首頁" class="navbar-brand" href="index.html"><img id="logoImg" alt="全國新書資訊網logo" src="img/logo.png"></a></h1>
+            </div>
+            <!-- 手機隱藏選單區 -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse wrapper-menu">
+                <!-- 主選單 -->
+                <ul class="nav navbar-nav main-menu">
+                    <li><a title="連結至：服務項目" href="2.1.1-IntroISBN.html">服務項目</a></li>
+                    <li><a title="連結至：線上申請" href="3.1-MemberLogin.html">線上申請</a></li>
+                    <li><a title="連結至：書目資料庫" href="4.1.1-SearchBooks.html">書目資料庫</a></li>
+                    <li><a title="連結至：書目下載" href="5.2-WholeDownload.html">書目下載</a></li>
+                    <li><a title="連結至：出版機構網" href="6.2.1-SortByStroke.html">出版機構網</a></li>
+                    <li><a title="連結至：出版品" href="7.2.1-NewBookIssue.html">出版品</a></li>
+                    <li><a title="連結至：工具與資源" href="8.1-ISBNChangeCode.html">工具與資源</a></li>
+                </ul>
+                <!-- 次選單 -->
+                <ul class="nav navbar-nav sub-menu">
+                    <li><a title="按鈕：聯絡我們" target="_blank" href=""><span class="glyphicon glyphicon-envelope">&ensp;</span>聯絡我們</a></li>
+                    <li><a title="Change to the English Version Web" target="_blank" class="btn-language hidden-xs" href="">English</a></li>
+                </ul>
+            </div>
+            <!-- 手機隱藏選單區結束 -->
+            <script type="text/javascript">
+            var $ofweidht = innerWidth; //取得螢幕寬度
+            if ($ofweidht <= 768) { //設定判斷條件，大於等於1280時frametop的CSS屬性為block
+                document.getElementById("logoImg").src = 'img/logo-smallz.png';
+            } else {
+                document.getElementById("logoImg").src = 'img/logo.png';
+            }
+            </script>
+        </div>
+    </nav>
+    <!--nav結束-->
+    <section class="search-books mh-30">
+        <div class="container">
+            <div class="row">
+                <!--左欄開始-->
+                <div class="search-left col-xs-12 col-lg-3">
+                    <div class="panel panel-ISBN">
+                        <h2 class="title-left-ISBN">線上申請</h2>
+                        <ul class="ul_listnone list-ISBN">
+                            <li><h3 class="list-subLink-ISBN"><a title="在新視窗打開鏈結" target="_blank" href="3.1-MemberLogin.html">帳號登入/登出</a></h3>
+                            </li>
+                            <li><h3 class="list-subLink-ISBN"><a title="在新視窗打開鏈結" target="_blank" href="3.2-ISBNApplication.html">ISBN/CIP線上申請</a></h3>
+                            </li>
+                            <li><h3 class="list-subLink-ISBN"><a title="在新視窗打開鏈結" target="_blank" href="">申請進度查詢</a></h3>
+                            </li>
+                            <li><h3 class="list-subLink-ISBN"><a title="在新視窗打開鏈結" target="_blank" href="">確認出版作業</a></h3>
+                            </li>
+                            <li><h3 class="list-subLink-ISBN"><a title="在新視窗打開鏈結" target="_blank" href="">修改送存聯繫資料與密碼</a></h3>
+                            </li>
+                            <li><h3 class="list-subLink-ISBN"><a title="在新視窗打開鏈結" target="_blank" href="">線上申請說明</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- / 線上申請 -->
+                </div>
+                <!-- /search-left左欄-->
+                <!-- search-right右欄-->
+                <div class="search-right col-xs-12 col-lg-9">
+                    <div class="title-right-ISBN">
+                        <h2>ISBN/CIP線上申請</h2>
+                    </div>
+                    <div class="content-intro">
+                        <h4 class="text-right-ISBN">申請ＩＳＢＮ／編輯申請資料(2/3)</h4>
+                        <div class="col-xs-12 p-0">
+                            <a role="button" class="btn btn-disable col-xs-4">步驟1.填寫申請資料</a>
+                            <a role="button" class="btn btn-warning col-xs-4">步驟2.編輯申請資料</a>
+                            <a role="button" class="btn btn-disable col-xs-4"><span class="glyphicon glyphicon-ok">送出申請</span><span></span></a>
+                        </div>
+                        <div class="table-form">
+                            <table>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><strong>本書裝訂方式：</strong></td>
+                                    <td style="width: 80%">
+                                        <div>
+                                            <input type="checkbox" name="F0" id="F0_1" multiple>
+                                            <label for="F0_1">精裝，</label><label for="F0_1_Price">價格NT$<input type="text" name="F0_1_Price" id="F0_1_Price" value="" size="6">元</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="F0" id="F0_2" multiple>
+                                            <label for="F0_2">平裝，</label><label for="F0_2_Price">價格NT$<input type="text" name="F0_2_Price" id="F0_2_Price" value="" size="6">元</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="F0" id="F0_3" multiple>
+                                            <label for="F0_3" class="inline-block">其他裝訂（如：古籍式線裝、經摺裝等）<input type="text" name="F0_3b" id="F0_3b" value="" size="20">，</label><label for="F0_3_Price" class="inline-block">價格NT$<input type="text" name="F0_3_Price" id="F0_3_Price" value="" size="10">元</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="F0b" id="F0_4" multiple>
+                                            <label for="F0_4">附件（如：附DVD、CD等）</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><strong>是否申請CIP：</strong></td>
+                                    <td style="width: 80%">
+                                        <input type="radio" name="FO_AppCIP" id="FO_AppCIP_Y" value=""><label for="F0_AppCIP_Y">是</label>&emsp;
+                                        <input type="radio" name="FO_AppCIP" id="FO_AppCIP_N" value=""><label for="F0_AppCIP_N">否</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><label for="F3_PubLanguage">作品語文：</label>
+                                    </td>
+                                    <td style="width: 80%">
+                                        <select name="F3_PubLanguage" id="F3_PubLanguage" size="1" class="inline-block">
+                                            <option value="0" selected>請選擇</option>
+                                            <option value="131">繁體中文</option>
+                                            <option value="132">簡體中文</option>
+                                            <option value="133">英文</option>
+                                            <option value="134">日文</option>
+                                            <option value="135">韓文</option>
+                                            <option value="136">德文</option>
+                                            <option value="137">法文</option>
+                                            <option value="138">其他 (請在右方欄位中填答)</option>
+                                        </select>
+                                        <label for="F3_PubLanguageOTH" class="inline-block">其他：<input type="text" name="F3_PubLanguageOTH" id="F3_PubLanguageOTH" value="" size="20"></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right">
+                                        <sup class="color-red">＊</sup><label for="F4_Audience">適讀對象：</label>
+                                    </td>
+                                    <td style="width: 80%">
+                                        <select name="F4_Audience" id="F4_Audience" size="1">
+                                            <option value="0" selected>請選擇</option>
+                                            <option value="161">成人(一般)</option>
+                                            <option value="162">成人(學術)</option>
+                                            <option value="163">青少年</option>
+                                            <option value="164">兒童(6-12)</option>
+                                            <option value="165">學前兒童</option>
+                                            <option value="166">樂齡</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right">
+                                        <sup class="color-red">＊</sup><label for="F5_FormType">常用分類：</label>
+                                    </td>
+                                    <td style="width: 80%">
+                                        <select name="F5_FormType" size="1">
+                                            <option value="0" selected>請選擇</option>
+                                            <option value="171">文學 (含文學史、文學評論、散文、詩、劇本等)</option>
+                                            <option value="172">小說 (含輕小說)</option>
+                                            <option value="173">語言 (含語言學及世界各國語言學習讀本)</option>
+                                            <option value="174">字典工具書 (字典等參考等工具書)</option>
+                                            <option value="175">教科書 (含各學程、領域教科用書)</option>
+                                            <option value="176">考試用書 (含升學、國家考試、就業、自修等參考用書)</option>
+                                            <option value="177">漫畫書</option>
+                                            <option value="178">心理勵志</option>
+                                            <option value="179">科學與技術 (含自然科學、電腦通訊、農業、工程、製造等)</option>
+                                            <option value="180">醫學家政 (含醫學、保健、家事、食品營養、食譜等)</option>
+                                            <option value="181">商業與管理 (含工商企管會計廣告等相關用書)</option>
+                                            <option value="182">社會科學 (含統計、教育、禮俗、社會、財經、法政、軍事等)</option>
+                                            <option value="183">人文史地 (含哲學、宗教、史地、傳記、考古等)</option>
+                                            <option value="184">兒童讀物 (含繪本、故事書等)</option>
+                                            <option value="185">藝術 (含音樂、建築、雕塑、書畫、攝影、美工、技藝、戲劇等)</option>
+                                            <option value="186">休閒旅遊</option>
+                                            <option value="187">其他</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right">
+                                        <sup class="color-red">＊</sup><label for="F6_TopicType">圖書主題：</label>
+                                    </td>
+                                    <td style="width: 80%">
+                                        <select name="F6_TopicType" size="1">
+                                            <option value="0" selected>請選擇</option>
+                                            <option value="191">總類</option>
+                                            <option value="192">哲學</option>
+                                            <option value="193">宗教</option>
+                                            <option value="194">自然科學</option>
+                                            <option value="195">電腦與資訊科學</option>
+                                            <option value="196">應用科學</option>
+                                            <option value="197">社會科學</option>
+                                            <option value="198">史地/傳記</option>
+                                            <option value="199">語言/文學</option>
+                                            <option value="200">兒童文學</option>
+                                            <option value="201">藝術</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right">
+                                        <sup class="color-red">＊</sup><label for="F7_LimitType">分級註記：</label>
+                                    </td>
+                                    <td style="width: 80%">
+                                        <select name="F7_LimitType" size="1">
+                                            <option value="0" selected>請選擇</option>
+                                            <option value="126">普遍級</option>
+                                            <option value="127">限制級</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right">
+                                        <sup class="color-red">＊</sup><label for="F8_">是否為翻譯著作：</label>
+                                    </td>
+                                    <td style="width: 80%">
+                                        <div>
+                                            <input type="radio" name="F8_YN_Translate" id="F8_YN_Translate_Y" required>
+                                            <label for="F8_YN_Translate_Y">是</label>
+                                            <div class="reveal-if-active col-xs-12">
+                                                <div>
+                                                    <label for="F8_OriTitle">原書書名：
+                                                    <input type="text" id="F8_OriTitle" name="F8_OriTitle" size="52">
+                                                </label>
+                                                
+                                                </div>
+                                                <div>
+                                                    <label for="F8_OriLanguage">原書語文：
+                                                    <select name="F8_OriLanguage" size="1">
+                                                        <option value="0" selected>請選擇</option>
+                                                        <option value="141">英文</option>
+                                                        <option value="142">日文</option>
+                                                        <option value="143">韓文</option>
+                                                        <option value="144">德文</option>
+                                                        <option value="145">法文</option>
+                                                        <option value="146">簡體中文</option>
+                                                        <option value="147">其他 (請在右方欄位中填答)</option>
+                                                    </select>
+                                                </label>
+                                                <label for="F8_OriLanguage_else">其他<input type="text" id="F8_OriLanguage_else" name="F8_OriLanguage_else" size="20"></label>
+                                                </div>
+                                                <div>
+                                                    <label for="F8_OriLanguage">原書國別：
+                                                    <select name="F8_OriCountry" size="1">
+                                                        <option value="0" selected>請選擇</option>
+                                                        <option value="151">美國</option>
+                                                        <option value="152">英國</option>
+                                                        <option value="153">日本</option>
+                                                        <option value="154">韓國</option>
+                                                        <option value="155">中國大陸</option>
+                                                        <option value="156">其他 (請在右方欄位中填答)</option>
+                                                    </select>
+                                                </label>
+                                                <label for="F8_OriCountry_else">其他<input type="text" id="F8_OriCountry_else" name="F8_OriCountry_else" size="20"></label>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="radio" name="F8_YN_Translate" id="F8_YN_Translate_N">
+                                            <label for="F8_YN_Translate_N">否</label>
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 20%" class="text-right"><sup class="color-red">＊</sup><strong>本書是：</strong></td>
+                                    <td style="width: 80%">
+                                        <p class="hr">本書若屬下列範圍，不需申請出版品預行編目：</p>
+                                        <div class="col-xs-12 p-0 hr">
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>中小學教科書或考試題庫</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>外文書</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>連環漫畫書</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>樂譜</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>單張地圖</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>盲人點字書</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>寫真集</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>未滿50頁圖書</p>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-4">
+                                                <p>圖書以外的其他媒體資料</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 p-0">
+                                            <p>非上述範圍者，若需申請出版品預行編目，請繼續填寫下列申請資料。</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                           
+
+                            <div class="form-group col-xs-12 mt-10 p-0 text-center">
+                                <div class="col-xs-12 col-md-6 text-left">
+                                    <input type="checkbox" name="autoSave" id="autoSave" class="inline-block" checked="checked">
+                                    <p class="color-red inline-block">切換頁面時自動儲存所有資料</p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 text-right">
+                                    <a href="" class="btn btn-blue" type="button">修改儲存</a>
+                                    <a href="3.2-ISBNApplication-s2.html" class="btn btn-blue" type="button">填上一頁</a>
+                                    <a href="3.2-ISBNApplication-s4.html" class="btn btn-blue" type="button">填下一頁</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                    <!-- / content-intro內文/內容包在這 -->
+                </div>
+                <!-- /search-right 右欄-->
+            </div>
+            <!-- / row 整個內容-->
+        </div>
+        <!-- / container 整個內容 -->
+    </section>
+    <!-- / container 整個段落內容-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3 logo-link">
+                    <a title="新視窗開啟：國家圖書館首頁" href="https://www.ncl.edu.tw/" target="_blank"><img alt"連結至國家圖書館首頁" src="img/logo-NCL.png"></a>
+                    <a title="新視窗開啟：ISBN新書資訊網首頁" href="index.html" target="_blank"><img alt"連結至ISBN新書資訊網首頁" src="img/logo-ISBN-w.png"></a>
+                    <a title="回頂端按鈕" onclick="topFunction()" id="goTop" href=""><img alt="回頂端按鈕" src="img/btn-gototop.png"></a>
+                </div>
+                <div class="col-xs-12 col-lg-9 footer-address">
+                    <div class="col-xs-12">
+                        <a title="新分頁開啟：網站地圖" target="_blank" href="">網站地圖</a>&emsp;|&emsp;<a title="新分頁開啟：聯絡信箱" target="_blank" href="">聯絡信箱</a>&emsp;|&emsp;<a title="新分頁開啟：本館地圖及交通資訊" target="_blank" href="">本館地圖及交通資訊</a>
+                        <div class="color-gray float-right">國家圖書館著作權聲明 Copyright © 2018 All rights reserved.</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-lg-4 color-white center">本館地址：10001臺北市中山南路20號</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">總機：(02)23619132</div>
+                        <div class="col-xs-12 col-lg-4 color-white center">歡迎您，您是第 18078572 位拜訪者</div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="inline-block">線上看：<a title="新分頁開啟：《臺灣出版與閱讀》" target="_blank" href="">《臺灣出版與閱讀》</a>、<a title="新分頁開啟：《全國新書資訊月刊》" target="_blank" href="">《全國新書資訊月刊》</a>、<a title="新分頁開啟：每日預告書訊" target="_blank" href="">每日預告書訊</a></div>
+                        <div class="float-right">更新日期：2018-06-27</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
